@@ -1,6 +1,6 @@
-package Sprint1;
+package com.utilities;
 
-public class Test2 {
+public class Testutlil {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
