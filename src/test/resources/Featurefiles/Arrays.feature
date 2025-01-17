@@ -213,12 +213,12 @@ Scenario: Verify user able to navigate Arrays page
     Scenario: Verify user able to run with no code 
     Given The User in on Questions page
     When   user clicks run button
-    Then  user able to see Error occurred during submission message in console
+    Then  user able to see alert message
     
     Scenario: Verify user able to run with invalid code 
     Given The User in on Questions page
     When   user clicks run button
-    Then  user able to see Error occurred during submission message in console
+    Then  user able to see alert box with syntax error message
     
     
     Scenario: Verify user able to run with valid code 
@@ -229,22 +229,19 @@ Scenario: Verify user able to navigate Arrays page
     Scenario: Verify user able to submit with no code 
     Given The User in on Questions page
     When   user clicks submit button
-    Then  user able to see Error occurred during submission message
+    Then  user able to see Error occurred during submission message in console
     
     Scenario: Verify user able to submit with invalid code 
     Given The User in on Questions page
     When   user clicks submit button
-    Then  user able to see Error occurred during submission message
+    Then  user able to see Error occurred during submission message in console
     
     Scenario: Verify user able to submit with valid code 
     Given The User in on Questions page
     When   user clicks submit button
     Then  user able to see Submission Successful message in console
     
-    
-    
-    
-    
+  
       
       
     
