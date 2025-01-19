@@ -5,17 +5,45 @@ import org.openqa.selenium.WebDriver;
 
 public class Treepage {
 
-	public WebDriver driver;
+	private WebDriver driver;
+	
+//2. constructure of the page class
 	public Treepage(WebDriver driver ) {
 		this.driver = driver;
 		}
-
-	public	By treeGetStartedBtn = By.xpath("//a[@href='tree']");
-	public By overviewTrees = By.xpath("//a[@href=\"overview-of-trees\"]");
-	public	By tryHere = By.linkText("Try here>>>");
-	public	By texteditor = By.xpath("//div[contains(@class,'CodeMirror')]/div/textarea");
-	public By runbutton = By.xpath("//button[text()='Run']");
-	public By output = By.id("output");
+//1.By locators
+	private By landingGetStartedbtn=By.xpath("//button[@class=\"btn\"]");
+	private By signIn=By.xpath("//a[@href=\"/login\"]");
+	
+	private By username=By.xpath("//input[@name=\"username\"]");
+	private By password = By.xpath("//input[@name=\"password\"]"); 
+	
+	private	By treeGetStartedBtn = By.xpath("//a[@href='tree']");
+	private By overviewTrees = By.xpath("//a[@href=\"overview-of-trees\"]");
+	private	By tryHere = By.linkText("Try here>>>");
+	private	By texteditor = By.xpath("//div[contains(@class,'CodeMirror')]/div/textarea");
+	private By runbutton = By.xpath("//button[text()='Run']");
+	private By output = By.id("output");
+	
+//3.page actions
+	
+	public String getPageTitle() {
+		return driver.getTitle();
+		
+	}
+	
+	public void landingGetStartedbtnClick() {
+		driver.findElement(landingGetStartedbtn).click();
+	}
+	
+	public void SignInBtn() {
+		driver.findElement(signIn).click();
+	}
+	
+	public void enterUsername(String userName) {
+		driver.findElement(username).sendKeys(userName);
+	}
+	
 	
 	
 	public void treeGetStartedBtnClick() {
