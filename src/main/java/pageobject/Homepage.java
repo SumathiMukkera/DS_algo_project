@@ -9,8 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Homepage {
+
+	public WebDriver driver;
 	
- public static WebDriver driver;
+public Homepage(WebDriver Driver) {
+	
+	this.driver = Driver;
+}
+
  
  By home_getstarted =By.xpath("//button[@class='btn']");
  By DS_getstarted = By.xpath("//a[@href ='data-structures-introduction']");
