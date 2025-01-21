@@ -28,6 +28,12 @@
     <artifactId>cucumber-testng</artifactId>
     <version>7.20.1</version>
 </dependency>
+<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>7.18.0</version>
+			<scope>test</scope>
+		</dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
@@ -72,12 +78,29 @@
     <version>5.4.0</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.5.2</version>
-</dependency>
-
   </dependencies>
+  <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<!--
+					https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.13.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.5.2</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile></suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+  
 </project> 
