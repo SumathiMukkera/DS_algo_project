@@ -34,8 +34,8 @@ public class Hooks {
 		String urlname=prop.getProperty("url");
 		driverFactory = new DriverFactory();
 		driver= driverFactory.init_driver(browsername);
-		DriverFactory.getDriver().get(urlname);
-		
+		 DriverFactory.getDriver().get(urlname);
+	
 	}
 	
 	@After(order =0)

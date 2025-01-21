@@ -1,27 +1,37 @@
 package stepdefination;
 
+import org.testng.Assert;
+
+import com.DriverFactory.DriverFactory;
+
 import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobject.DataStructurespage;
 
 public class DataStructuresSD {
 	
-	DataStructurespage datapage = new DataStructurespage();
+	DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
 	
 	@Given("The user is in the Home page after logged in")
 	public void the_user_is_in_the_home_page_after_logged_in() {
 	    
+		
 	}
 
 	@When("The user clicks on Get Started button Data Structures - Introduction")
 	public void the_user_clicks_on_get_started_button_data_structures_introduction() {
+		
+		datapage.click_DSgetstarted();
+		
 	   
 	}
 
 	@Then("The user should land in Data Structures- Introduction Page")
 	public void the_user_should_land_in_data_structures_introduction_page() {
-	    
+		
+	    Assert.assertTrue(false, datapage.click_DSgetstarted().toString());
 	}
 
 	@Given("The user is in the Data Structures - Introduction page after sign in")
