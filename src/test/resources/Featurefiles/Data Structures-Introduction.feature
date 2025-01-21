@@ -1,8 +1,6 @@
 Feature: Data-Structure Intrudoction module
    open Data Structure Intoduction module in DS-algo portal
    
-   Background: The user sign in to dsAlgo Portal 
-   
    Scenario: Verify user able to navigate Data Structures - Introduction page
    Given The user is in the Home page after logged in
    When The user clicks on Get Started button Data Structures - Introduction
