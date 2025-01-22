@@ -26,8 +26,7 @@ public class TreeSD {
 	@Then("User should navigate to home Page with title {string}")
 	public void user_should_navigate_to_home_page_with_title(String Expectedtitle) {
 		 title=tree.getPageTitle();
-		System.out.println("homepagetitle is" +title);
-		
+		System.out.println("homepagetitle is" +title);		
 		Assert.assertTrue(title.contains(Expectedtitle));
 	    Assert.assertEquals(tree.getPageTitle(), Expectedtitle);
 	}
