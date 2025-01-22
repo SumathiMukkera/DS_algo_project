@@ -12,7 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Homepage {
 
 	private WebDriver driver;
-	
  private By home_getstarted =By.xpath("//button[@class='btn']");
  private By Numpyninja = By.xpath("//a[text()='NumpyNinja']");
  private By DS_dropdown = By.xpath("//a[text()='Data Structures']");	
