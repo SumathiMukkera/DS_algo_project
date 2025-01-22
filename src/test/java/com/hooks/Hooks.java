@@ -1,20 +1,7 @@
 package com.hooks;
 
-import java.io.IOException;
-import java.util.Properties;
-
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
-import com.DriverFactory.*;
-import com.utilities.configFileReader;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
-
 public class Hooks {
+
 	
 	private DriverFactory driverFactory;
 	private WebDriver driver;
@@ -52,7 +39,5 @@ public class Hooks {
 		}
 	}
 	
-
-	}
 
 
