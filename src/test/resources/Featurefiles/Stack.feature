@@ -1,6 +1,6 @@
 
 Feature: Stack Feature
-   To Open 
+   To Open Stack data structure module in DS-algo portal
 
 Scenario: Verify user able to navigate "Stack" page
    Given The user is in the Home page after logged in
@@ -29,16 +29,16 @@ Then The user should be redirected to a page having an try Editor with a Run but
  Then The user should able to see an error message in alert window
 
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console
-    
+Scenario Outline: Verify user is able to run with valid and invalid python code
+Given I have the excel file "<filePath>" and sheet "<sheetName>"
+When I fetch the Python code from row "<rowNumber>"
+Then I execute the Python code and validate the result
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console 
+    Examples: 
+      | filePath | SheetName | rowNumber|
+      | TestData.xlsx | Queue| 1 |
+      | TestData.xlsx | Queue| 2 |     
+      | TestData.xlsx | Queue| 3 |
 
 Scenario: Verify that user is able to navigate to "Implementation" page
 Given The user is in the "Stack" page after sign in
@@ -62,16 +62,16 @@ Then The user should be redirected to a page having an try Editor with a Run but
  Then The user should able to see an error message in alert window
 
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console
-    
+Scenario Outline: Verify user is able to run with valid and invalid python code
+Given I have the excel file "<filePath>" and sheet "<sheetName>"
+When I fetch the Python code from row "<rowNumber>"
+Then I execute the Python code and validate the result
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console 
+    Examples: 
+      | filePath | SheetName | rowNumber|
+      | TestData.xlsx | Queue| 1 |
+      | TestData.xlsx | Queue| 2 |     
+      | TestData.xlsx | Queue| 3 |
 
 
 Scenario: Verify that user is able to navigate to "Applications" page
@@ -96,24 +96,13 @@ Then The user should be redirected to a page having an try Editor with a Run but
  Then The user should able to see an error message in alert window
 
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console
-    
-
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console 
-
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+Scenario Outline: Verify user is able to run with valid and invalid python code
+Given I have the excel file "<filePath>" and sheet "<sheetName>"
+When I fetch the Python code from row "<rowNumber>"
+Then I execute the Python code and validate the result
 
     Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+      | filePath | SheetName | rowNumber|
+      | TestData.xlsx | Queue| 1 |
+      | TestData.xlsx | Queue| 2 |     
+      | TestData.xlsx | Queue| 3 |

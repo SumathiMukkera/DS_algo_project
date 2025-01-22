@@ -17,7 +17,7 @@ Given The user is in the "Implimentation of Queue in the Python" page
 When I get all the links on the page
 Then each link should be clickable and lead to a valid page
 
-Scenario: Verify that user is able to navigate to "try Editor" page
+Scenario: Verify that user is able to navigate to "try Editor" page for arrays in Python page
 Given The user is in the "Implementation of Queue in Python" page
 When The user clicks "Try Here" button in "Implimentation of Queue in Python" page
 Then The user should be redirected to a page having an try Editor with a Run button to test 
@@ -39,6 +39,17 @@ Scenario: Verify that user is able to see output for valid python code
 Given The user is in the "tryEditor" page
 When The user write the valid code in Editor and click the Run Button
 Then The user should able to see output in the console 
+ 
+ Scenario Outline: Verify user is able to run with valid and invalid python code
+Given I have the excel file "<filePath>" and sheet "<sheetName>"
+When I fetch the Python code from row "<rowNumber>"
+Then I execute the Python code and validate the result
+
+    Examples: 
+      | filePath | SheetName | rowNumber|
+      | TestData.xlsx | Queue| 1 |
+      | TestData.xlsx | Queue| 2 |     
+      | TestData.xlsx | Queue| 3 |
  
     
 Scenario: Verify that user is able to navigate to "Implementation using collections.deque" page
