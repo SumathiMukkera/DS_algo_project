@@ -2,9 +2,42 @@ package com.hooks;
 
 public class Hooks {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
+	private DriverFactory driverFactory;
+	private WebDriver driver;
+	private configFileReader configReader;
+	Properties prop;
+	
+	@Before(order =0)
+	public void getProperty() {
+		configReader=new configFileReader();
+		prop =configReader.init_prop();
 	}
+	
+	@Before(order =1)
+	public void launchBrowser() {
+		String browsername=prop.getProperty("browser");
+		String urlname=prop.getProperty("url");
+		driverFactory = new DriverFactory();
+		driver= driverFactory.init_driver(browsername);
+		DriverFactory.getDriver().get(urlname);
+		
+	}
+	
+	@After(order =0)
+	public void quitBrowser() {
+		driver.quit();
+	}
+	
+	@After(order=1)
+	public void tearDown(Scenario scenario){
+		if(scenario.isFailed()) {
+			//take screenshot:
+			String screenshotName = scenario.getName().replaceAll("", "_");
+			byte [] sourcePath=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(sourcePath, "image/png", screenshotName);
+		}
+	}
+	
 
-}
+
