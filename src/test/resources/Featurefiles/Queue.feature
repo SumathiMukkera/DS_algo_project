@@ -28,19 +28,8 @@ Given The user is in the "tryEditor" page
 When The user clicks the Run Button without entering the code in the Editor
 Then The user should able to see an error message in alert window
 
-
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the "tryEditor" page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console
-    
-
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the "tryEditor" page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console 
  
- Scenario Outline: Verify user is able to run with valid and invalid python code
+Scenario Outline: Verify user is able to run with valid and invalid python code
 Given I have the excel file "<filePath>" and sheet "<sheetName>"
 When I fetch the Python code from row "<rowNumber>"
 Then I execute the Python code and validate the result
@@ -74,15 +63,16 @@ When The user clicks the Run Button without entering the code in the Editor
 Then The user should able to see an error message in alert window
 
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console
-    
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console 
+Scenario Outline: Verify user is able to run with valid and invalid python code
+Given I have the excel file "<filePath>" and sheet "<sheetName>"
+When I fetch the Python code from row "<rowNumber>"
+Then I execute the Python code and validate the result
+
+    Examples: 
+      | filePath | SheetName | rowNumber|
+      | TestData.xlsx | Queue| 1 |
+      | TestData.xlsx | Queue| 2 |     
+      | TestData.xlsx | Queue| 3 |
  
 
 Scenario: Verify that user is able to navigate to "Implementation using Array" page
@@ -108,16 +98,16 @@ When The user clicks the Run Button without entering the code in the Editor
 Then The user should able to see an error message in alert window
 
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console
-    
+Scenario Outline: Verify user is able to run with valid and invalid python code
+Given I have the excel file "<filePath>" and sheet "<sheetName>"
+When I fetch the Python code from row "<rowNumber>"
+Then I execute the Python code and validate the result
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console 
+    Examples: 
+      | filePath | SheetName | rowNumber|
+      | TestData.xlsx | Queue| 1 |
+      | TestData.xlsx | Queue| 2 |     
+      | TestData.xlsx | Queue| 3 |
 
 
 Scenario: Verify that user is able to navigate to "Queue Operations" page
@@ -142,24 +132,13 @@ When The user clicks the Run Button without entering the code in the Editor
 Then The user should able to see an error message in alert window
 
 
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console
-    
-
-Scenario: Verify that user is able to see output for valid python code 
-Given The user is in the tryEditor page
-When The user write the valid code in Editor and click the Run Button
-Then The user should able to see output in the console      
-
- 
-Scenario Outline: Title of your scenario outline
-Given I want to write a step with <name>
-When I check for the <value> in step
-Then I verify the <status> in step
+Scenario Outline: Verify user is able to run with valid and invalid python code
+Given I have the excel file "<filePath>" and sheet "<sheetName>"
+When I fetch the Python code from row "<rowNumber>"
+Then I execute the Python code and validate the result
 
     Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+      | filePath | SheetName | rowNumber|
+      | TestData.xlsx | Queue| 1 |
+      | TestData.xlsx | Queue| 2 |     
+      | TestData.xlsx | Queue| 3 |
