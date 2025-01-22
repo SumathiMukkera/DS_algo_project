@@ -23,6 +23,7 @@ public class configFileReader {
 			e.printStackTrace();
 		}
 		return prop;
+		
 	}
 	
 }

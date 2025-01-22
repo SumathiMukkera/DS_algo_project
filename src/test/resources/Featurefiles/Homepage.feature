@@ -18,9 +18,9 @@ Feature: Title of your feature
       Examples:
        |option |
        |Arrays |
-       |Linkedlist|
+       |Linked List|
        |Stack |
-       |Queqe |
+       |Queue |
        |Tree  |
        |Graph |
        

@@ -7,6 +7,7 @@ Feature: Title of your feature
     When The user should click the Login link	
     Then The user should be redirected to login page
     
+    
    Scenario: Verify that user navigate to registationpage
    	Given:	The user is on the DS Algo Login Page	
    	When:The user clicks register button 	

@@ -3,6 +3,7 @@ Feature: Arrays Data structure module
 
 Background: The user sign in to dsAlgo Portal 
 
+
 Scenario: Verify user able to navigate Arrays page
    Given The user is in the Home page after logged in
    When  The user clicks on Get Started button of Arrays or select Arrays option in datastructure dropdown

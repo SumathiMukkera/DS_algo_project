@@ -6,6 +6,7 @@ Feature: Data-Structure Intrudoction module
    When The user clicks on Get Started button Data Structures - Introduction
    Then The user should land in Data Structures- Introduction Page
    
+   
    Scenario: Verify that user is able to navigate to Time Complexity page
    Given The user is in the Data Structures - Introduction page after sign in
    When  The user clicks Time Complexity button on Data Structures- Intoduction page

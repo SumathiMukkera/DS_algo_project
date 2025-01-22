@@ -9,16 +9,16 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(stepdefination.class)
 
 @CucumberOptions(
-    features = "src/test/resources/Featurefiles",
-    glue = {"stepdefinition", "com.hooks"},
+    features = {"src/test/resources/Featurefiles/Registrationpage.feature"},
+    glue = {"RegistrationpageSD", "com.hooks"},
     plugin = {"pretty", "html:target/cucumber-reports.html"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
-	
-	@Override
-	@DataProvider(parallel = false) 
-	 public Object[][] scenarios() 
-	{
-	   return super.scenarios(); 
-	   }
+//	
+//	@Override
+//	@DataProvider(parallel = false) 
+//	 public Object[][] scenarios() 
+//	{
+//	   return super.scenarios(); 
+//	   }
  }

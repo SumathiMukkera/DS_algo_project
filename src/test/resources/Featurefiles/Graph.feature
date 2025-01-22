@@ -8,6 +8,7 @@ Background: The user sign in to dsAlgo Portal
 	When The user clicks the dropdownn menu and select Graph	
 	Then The user will redirected to be Graph Page 
 	
+	
 	Scenario: Verify that user is able to navigate to Graph page 
 	Given The user is in the Graph page after Sign in	
 	When The user clicks Graph button	

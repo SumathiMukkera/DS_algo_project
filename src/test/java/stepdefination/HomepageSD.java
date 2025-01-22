@@ -51,7 +51,8 @@ public class HomepageSD {
 	public void the_user_should_able_to_see_options_in_dropdown_menu(Integer itemcount) {
 		
 		int dropdowncount = home.getDropdownItemCount();
-		Assert.assertEquals(itemcount, dropdowncount);
+		  System.out.println("Expected item count: " + itemcount + ", Actual item count: " + dropdowncount);
+		Assert.assertEquals(itemcount.intValue(), dropdowncount);
 	   
 	}
 

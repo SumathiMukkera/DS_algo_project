@@ -13,6 +13,7 @@ Open Linked list module in DS-algo portal
   When The user clicks the Introduction button
   Then The user should be redirected to Introduction page 
   
+  
   Scenario: Verify that user is able to navigate to tryEditor page from Introduction page
   Given The user is on the Introduction page
   When The user clicks Try Here button in the Introduction page 
