@@ -11,8 +11,8 @@ Feature: Title of your feature
      	Then user should see alert on required empty field	
      	
      Scenario: verify user recieve error message when password mismatch
-     When      user enters mismatch password in cofirm password field and click on registration field
-     Then      user should see error message password mismatched
+       When      user enters mismatch password in cofirm password field and click on registration field
+       Then      user should see error message password mismatched
     
     Scenario: verify Registration fails with an already taken username
     When      user enter existing creadentials and enter register button

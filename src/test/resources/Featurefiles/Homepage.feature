@@ -5,8 +5,9 @@ Feature: Title of your feature
      	Given The user is on the DS Algo Portal
      	When The user clicks the Get Started button	
      	Then The user should be navigated to the Data Structure Introduction page, which displays the "Register" and "Sign in" links.
+    
      		
-     	Scenario: Verify that user is able to view options for "Data Structures" dropdown on home page without Sign in	
+     Scenario: Verify that user is able to view options for "Data Structures" dropdown on home page without Sign in	
      Given The user is on the Home page	
      When The user clicks the Data Structures dropdown 
      Then The user should able to see 7 options  in dropdown menu	
