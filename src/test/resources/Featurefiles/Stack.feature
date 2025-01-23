@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 Feature: Stack Feature
    To Open Stack data structure module in DS-algo portal
 
@@ -107,5 +105,4 @@ Then I execute the Python code and validate the result
       | TestData.xlsx | Queue| 1 |
       | TestData.xlsx | Queue| 2 |     
       | TestData.xlsx | Queue| 3 |
-=======
->>>>>>> branch 'Master' of https://github.com/SumathiMukkera/DS_algo_project.git
+
