@@ -6,6 +6,9 @@ package pageobject;
 	import org.openqa.selenium.chrome.ChromeDriver;
 
 	public class Arrayspage {
+
+
+		
 		
 		WebDriver driver = new ChromeDriver();
 		//driver = new ChromeDriver();
