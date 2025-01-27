@@ -9,9 +9,9 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(stepdefination.class)
 
 @CucumberOptions(
-    features = {"src/test/resources/Featurefiles/Registrationpage.feature"},
-    glue = {"RegistrationpageSD", "com.hooks"},
-    plugin = {"pretty", "html:target/cucumber-reports.html"}
+    features = {"src/test/resources/Featurefiles/Data Structures-introduction.feature"},
+    glue = {"stepdefination", "com.hooks"},
+    plugin = {"pretty", "html:target/cucumberreports.html"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 //	

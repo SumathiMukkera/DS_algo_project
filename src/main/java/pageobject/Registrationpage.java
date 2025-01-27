@@ -13,12 +13,14 @@ public class Registrationpage {
 	By Confirm_password = By.xpath("//input[@name='password2']");
 	By Register_registration = By.xpath("//input[@value='Register']");
 	By Login_registration = By.xpath("//a[@href='/login']");
-	private By errormsg_register = By.xpath("//div[contains(text(),'password_mismatch')]");
+	private By errormsg_register = By.xpath("//div[contains(@class, 'alert') and @role='alert']");
+	private By successmsg = By.xpath(" //div[contains(text(), 'New Account Created.')]");
 
 	public Registrationpage(WebDriver Driver) {
 
 		this.driver = Driver;
 	}
+	
 
 	public String homepagetitle() {
 
@@ -40,20 +42,23 @@ public class Registrationpage {
 	}
 
 	public void mismatchpassword() {
-
+		driver.findElement(Password_field).sendKeys("test1234");
+		driver.findElement(Confirm_password).sendKeys("test12345");
+		driver.findElement(Register_registration).click();
 	}
 
 	public String mismatchpassworderror() {
-		
-		driver.get("https://dsportalapp.herokuapp.com/register");
-		driver.findElement(By.id("id_username")).sendKeys("Numpysdet192");
-		driver.findElement(By.id("id_password1")).sendKeys("test1234");
-		driver.findElement(By.id("id_password2")).sendKeys("test1234");
-		driver.findElement(Register_registration).click();
+	
 		String errortext = driver.findElement(errormsg_register).getText();
 		System.out.println(errortext);
 		return errortext;
 
+	}
+	public void existinguser() {
+		driver.findElement(Username_field).sendKeys("Numpysdet192");
+		driver.findElement(Password_field).sendKeys("QAteam@192");
+		driver.findElement(Confirm_password).sendKeys("QAteam@192");
+		driver.findElement(Register_registration).click();
 	}
 	
 	public String existingusererror() {
@@ -73,6 +78,45 @@ public class Registrationpage {
 	  String title =  driver.getTitle();
 	  return title;
 	
+		
+	}
+	
+	public void numericdata() {
+		driver.findElement(Username_field).sendKeys("Numpy");
+		driver.findElement(Password_field).sendKeys("12345678");
+		driver.findElement(Confirm_password).sendKeys("12345678");
+		
+	}
+	
+	public void passwordlength() {
+		
+		driver.findElement(Username_field).sendKeys("Numpy");
+		driver.findElement(Password_field).sendKeys("test12");
+		driver.findElement(Confirm_password).sendKeys("test12");
+	}
+	
+	public void invalidusername(String username) {
+		
+		driver.findElement(Username_field).sendKeys(username);
+		
+	}
+	@SuppressWarnings("deprecation")
+	public String validregister() {
+		
+		String username = "numpy" + System.currentTimeMillis();
+		driver.findElement(Username_field).sendKeys(username);
+		driver.findElement(Password_field).sendKeys("test@12345");
+		driver.findElement(Confirm_password).sendKeys("test@12345");
+		driver.findElement(Register_registration).click();
+		return driver.findElement(Username_field).getAttribute(username);
+	}
+	
+	public String successregistrationmsg() {
+		    	
+		String text = driver.findElement(errormsg_register).getText();
+		
+		    	return text ;
+		
 		
 	}
 		
