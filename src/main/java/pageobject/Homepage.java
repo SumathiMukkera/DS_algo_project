@@ -32,6 +32,7 @@ public class Homepage {
 		this.driver = Driver;
 	}
  
+ 
  public String getlandingpagetitle() {
 	 
 	return driver.getTitle();

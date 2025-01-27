@@ -24,7 +24,7 @@ Feature: Title of your feature
     
    Scenario: Verify that user receives error message for invalid password field during registration
     When     user clicks Register button after entering a password with numeric data
-    Then     user is not able to see error msg after entering invalid data
+    Then     user is  able to see error msg after entering invalid data
     
     Scenario: Verify password length validation
     When user enters a password less than 8 characters and clicks Register
@@ -32,7 +32,7 @@ Feature: Title of your feature
     
     
     Scenario Outline: Verify that the user receives an error message for invalid username formats during registration
-       When          user clicks the "Register" button after entering a username <username>
+       When          user clicks the Register button after entering a username <username>
        Then         user should see an error message indicating that the username <error_message>
     Examples:
        |   username	             |        error_message                     |
@@ -44,7 +44,7 @@ Feature: Title of your feature
         
     Scenario: verify Successful registration with valid details
     When     user clicks Register button after entering  with valid username, password and password confirmation in related textboxes 
-    Then     user should be redirected to Home Page of DS Algo with message "New Account Created You are logged in as <ID>"
+    Then     user should be redirected to Home Page of DS Algo with message "New Account Created You are logged in as "
             
             
 

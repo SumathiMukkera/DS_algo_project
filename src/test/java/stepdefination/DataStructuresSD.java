@@ -1,93 +1,144 @@
 package stepdefination;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import com.DriverFactory.DriverFactory;
+import com.hooks.Loginbase;
+import com.utilities.ExcelfileReader;
 
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.Given;
-
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobject.DataStructurespage;
+import pageobject.Homepage;
 
 public class DataStructuresSD {
-	
-	DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
-	
-	@Given("The user is in the Home page after logged in")
-	public void the_user_is_in_the_home_page_after_logged_in() {
-	    
+
+    private WebDriver driver;
+    public DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
+    public Loginbase login = new Loginbase();
+
+    @Before("@DS_Introduction")
+    public void login() throws IOException {
+        login.getlogindetails();
+    }
+
+    @Given("The user is in the Home page after logged in")
+    public void the_user_is_in_the_home_page_after_logged_in() {
+        System.out.println(datapage.getHomePageTitle());
+        Assert.assertTrue(datapage.getHomePageTitle().contains("NumpyNinja"), "NumpyNinja");
+    }
+
+    @When("The user clicks on Get Started button Data Structures - Introduction")
+    public void the_user_clicks_on_get_started_button_data_structures_introduction() {
+        datapage.clickDSGetStarted();
+    }
+
+    @Then("The user should land in Data Structures- Introduction Page")
+    public void the_user_should_land_in_data_structures_introduction_page() {
+    	
+        String title = datapage.getDSIntroPageTitle();
+        System.out.println(title);
+        Assert.assertTrue(title.contains("Data Structures-Introduction"), "Data Structures-Introduction");
+    }
+
+    @When("The user clicks Time Complexity button on Data Structures- Intoduction page")
+    public void the_user_clicks_time_complexity_button_on_data_structures_intoduction_page() {   //failed scenario
+    	
+    	datapage.clickTimeComplexity();
+    }
+
+    @Then("The user should be redirected to Time Complexity of Data structures-Introduction")
+    public void the_user_should_be_redirected_to_time_complexity_of_data_structures_introduction() {
+    	
+     	datapage.clickTimeComplexity();
+        String title = datapage.getTimeComplexityTitle();
+        System.out.println(title);
+        Assert.assertTrue(title.contains("Time Complexity"), "Time Complexity");
+    }
+
+    @Given("The user is in the Time Complexity page")
+    public void the_user_is_in_the_time_complexity_page() {
+    	
+      	datapage.clickTimeComplexity();
+        String title = datapage.getTimeComplexityTitle();
+        Assert.assertEquals(title, "Time Complexity");
+        
+    }
+
+    @When("the user clicks Try here button on Time Complexity page")
+    public void the_user_clicks_try_here_button_on_time_complexity_page() {     //failed scenario
+    	 
+      	datapage.clickTimeComplexity();
+        datapage.clickTryHere();
+    }
+
+    @Then("The user should be redirected to a page having an try Editor with a Run button to test")
+    public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() {
+   
+    	String text = datapage.getTryHerePageTitle();
+        System.out.println(text);
+        Assert.assertEquals(text, "Assessment");
+    }
+
+    @Given("user have to fetch python code from Excel file from sheet {string} and {int}  and click run button")  //failed scenario
+    public void user_have_to_fetch_python_code_from_excel_file_from_sheet_and_and_click_run_button(String sheetName, Integer rowNumber)  throws InvalidFormatException {
+    	 
+        	datapage.clickTimeComplexity();
+     	    datapage.clickTryHere();
+       
+        try {
+        	 String filepath = "src/test/resources/Exceltestdata/ExcelTestdata.xlsx";
+        	 ExcelfileReader reader = new ExcelfileReader();
+			List<Map<String, String>> excelData = reader.getData(filepath, sheetName);
+            String pythonCode = excelData.get(rowNumber).get("Pythoncode");
+            datapage.enterPythonCode(pythonCode);
+            datapage.clickRun();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    
+    @Then("user execute the Python code and validate the result")
+    public void user_execute_the_python_code_and_validate_the_result() throws InvalidFormatException, IOException {
+    	 String filepath = "src/test/resources/Exceltestdata/ExcelTestdata.xlsx";
+    	 ExcelfileReader reader = new ExcelfileReader();
+		String sheetName = "Try Editor";
+		List<Map<String, String>> excelData = reader.getData(filepath, sheetName);
+		System.out.println(excelData.size());
+		System.out.println("exceldata"+ excelData);
+		String Results = null;
+		for(int i = 0; i<excelData.size(); i++) {
+		 Results =excelData.get(i).get("Results");
+		System.out.println(Results);
+		}
+		 String actualresult = datapage.getResult();
+        System.out.println("Execution result: " + actualresult);
+        Assert.assertEquals(actualresult, Results );
 		
-	}
+    }
+    
 
-	@When("The user clicks on Get Started button Data Structures - Introduction")
-	public void the_user_clicks_on_get_started_button_data_structures_introduction() {
-		
-		datapage.click_DSgetstarted();
-		
-	   
-	}
+    @When("The user clicks practice Questions button")
+    public void the_user_clicks_practice_questions_button() {  //failed scenario
+    	datapage.clickTimeComplexity();
+        datapage.clickPracticeQuestions();
+    }
 
-	@Then("The user should land in Data Structures- Introduction Page")
-	public void the_user_should_land_in_data_structures_introduction_page() {
-		
-	    Assert.assertTrue(false, datapage.click_DSgetstarted().toString());
-	}
-
-	@Given("The user is in the Data Structures - Introduction page after sign in")
-	public void the_user_is_in_the_data_structures_introduction_page_after_sign_in() {
-	    
-	}
-
-	@When("The user clicks Time Complexity button on Data Structures- Intoduction page")
-	public void the_user_clicks_time_complexity_button_on_data_structures_intoduction_page() {
-	    
-	}
-
-	@Then("The user should be redirected to Time Complexity of Data structures-Introduction")
-	public void the_user_should_be_redirected_to_time_complexity_of_data_structures_introduction() {
-	   
-	}
-
-	@Given("The user is in the Time Complexity page")
-	public void the_user_is_in_the_time_complexity_page() {
-	   
-	}
-
-	@When("the user clicks Try here button on Time Complexity page")
-	public void the_user_clicks_try_here_button_on_time_complexity_page() {
-	    
-	}
-
-	@Then("The user should be redirected to a page having an try Editor with a Run button to test")
-	public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() {
-	   
-	}
-
-	@Given("I have the Excel file {string} and sheet {string}")
-	public void i_have_the_excel_file_and_sheet(String string, String string2) {
-	    
-	}
-
-	@When("I fetch the Python code from row {string}")
-	public void i_fetch_the_python_code_from_row(String string) {
-	    
-	}
-
-	@Then("I execute the Python code and validate the result")
-	public void i_execute_the_python_code_and_validate_the_result() {
-	    
-	}
-
-	@When("The user clicks practice Questions Button")
-	public void the_user_clicks_practice_questions_button() {
-	    
-	}
-
-	@Then("The user should be redirected to Practice Questions of Data structures-Introduction")
-	public void the_user_should_be_redirected_to_practice_questions_of_data_structures_introduction() {
-	    
-	}
-
-
+    @Then("The user should be redirected to Practice Questions of Data structures-Introduction")
+    public void the_user_should_be_redirected_to_practice_questions_of_data_structures_introduction() {
+        String title = datapage.getPracticeQuestionsPageTitle();
+        System.out.println(title);
+        Assert.assertEquals(title, "Practice Questions");
+    }
 }
