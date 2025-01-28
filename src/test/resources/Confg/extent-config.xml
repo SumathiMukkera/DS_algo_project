@@ -1,0 +1,8 @@
+<extentreports>
+    <configuration>
+        <reportName>My Extent Report</reportName>
+        <theme>standard</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>https</protocol>
+    </configuration>
+</extentreports>
