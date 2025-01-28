@@ -1,1 +1,35 @@
 
+package Base;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Loginexecution {
+	
+	private WebDriver driver;
+	private By home_getstarted = By.xpath("//button[@class='btn']");
+	private By Login_Button = By.xpath("//a[@href='/login']");
+	private By Username_field = By.xpath("//input[@name='username']");
+	private By Password_field = By.xpath("//input[@name='password']");
+	private By Login_submit = By.xpath("//input[@value='Login']");
+	
+	public Loginexecution(WebDriver driver) {
+		
+		this.driver = driver;
+		
+	}
+	
+	
+	public void executeLogin( String username, String password) {
+		
+		//driver.get(URL);
+		driver.findElement(home_getstarted).click();
+		driver.findElement(Login_Button).click();
+		driver.findElement(Username_field).sendKeys(username);
+		driver.findElement(Password_field).sendKeys(password);
+		driver.findElement(Login_submit).click();
+		
+		
+	}
+
+}
