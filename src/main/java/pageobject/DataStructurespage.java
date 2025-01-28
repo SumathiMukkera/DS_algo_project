@@ -19,6 +19,7 @@ public class DataStructurespage {
     public DataStructurespage(WebDriver driver) {
         this.driver = driver;
     }
+    
 
     // Locators
     private By homeGetStarted = By.xpath("//button[@class='btn']");

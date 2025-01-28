@@ -18,7 +18,7 @@ public class HomepageSD {
 	home.getlandingpagetitle();  
 	
 	}
-
+	
 	@When("The user clicks the Get Started button")
 	public void the_user_clicks_the_get_started_button() {
 		
