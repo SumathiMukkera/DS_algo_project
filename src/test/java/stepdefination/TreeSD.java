@@ -4,8 +4,9 @@ import io.cucumber.java.en.Given;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
 import pageobject.Treepage;
+
+import org.testng.Assert;
 
 import com.DriverFactory.DriverFactory;
 public class TreeSD {
@@ -23,7 +24,7 @@ public class TreeSD {
 	   tree.landingGetStartedbtnClick();
 	}
 
-	@SuppressWarnings("deprecation")
+	
 	@Then("User should navigate to home Page with title {string}")
 	public void user_should_navigate_to_home_page_with_title(String Expectedtitle) {
 		 title=tree.getPageTitle();

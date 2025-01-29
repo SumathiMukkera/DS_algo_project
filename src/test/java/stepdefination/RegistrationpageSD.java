@@ -3,6 +3,7 @@ package stepdefination;
 import org.testng.Assert;
 
 import com.DriverFactory.DriverFactory;
+import com.utilities.LoggerLoad;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,6 +22,7 @@ public class RegistrationpageSD {
 		 String hometitle = home.gethomepagetitle();
 		  System.out.println(hometitle);
 		  Assert.assertTrue(hometitle.contains("NumpyNinja"),"The homepage title is incorrect.");
+		  LoggerLoad.info("user is on homepage");
 		  
 	}
 
@@ -124,9 +126,8 @@ public class RegistrationpageSD {
 	public void user_should_be_redirected_to_home_page_of_ds_algo_with_message(String successmsg) {
 		
 		String msg = register.successregistrationmsg();
-		String username;
-		String success = msg + username;
-		Assert.assertEquals(msg, successmsg);
+		String userid = register.userid();
+		Assert.assertEquals(msg, ("New Account Created. You are logged in as "+ userid.toLowerCase()));
 	  
 	}
 
