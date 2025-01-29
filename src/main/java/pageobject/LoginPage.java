@@ -8,14 +8,16 @@ public class LoginPage {
 
 	public WebDriver driver;
 	
-	By GetStartedbutton = By.xpath("//button[@class='btn']");
-	//a[@href='/home']")
+	By GetStartedbutton = By.xpath("//a[@href='/home']");
+	//button[@class='btn']"//
 	 By SignIn = By.xpath("//a[@href='/login']");
+	 By Register_onlogin = By.xpath("//a[@href='/register']");
 	By Username_field = By.xpath("//input[@name='username']");
     By Password_field = By.xpath("//input[@name='password']");
 	By Login_submit = By.xpath("//input[@value='Login']");
-	By errorMessage=By.xpath("//div[@class='alert alert-primary']" );//
-	By Register_onlogin = By.xpath("//a[text()='Register!']");
+	By errorMessage=By.xpath("//div[@class='alert alert-primary']");
+    By Youareloggedin = By.xpath("//div[@class='alert alert-primary']");
+	//By Register_onlogin = By.xpath("//a[@href='/register']");
 	
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
@@ -24,6 +26,12 @@ public class LoginPage {
 	 public void clickGetStartedbutton() {
 			driver.findElement(GetStartedbutton).click();
             }
+	 
+	 public String gethomepagetitle() {
+		 driver.findElement(GetStartedbutton);
+		 String gethomepagetitle = driver.getTitle();
+		 return gethomepagetitle;
+	 }
 	 
 	 public void SignInBtn() {
 			driver.findElement(SignIn).click();
@@ -53,26 +61,28 @@ public class LoginPage {
 		    public void setPassword(String password) {
 		        driver.findElement(getPassword_field()).sendKeys(password);
 		    }
+		    
+		    public String getErrorMessage() { //error message display
+		        return driver.findElement(errorMessage).getText();
+		    }
 
 		    public void clickLoginButton() { //complete login page action and return homepage
 		        driver.findElement(Login_submit).click();
 		    }
 
-		    public String getErrorMessage() { //error message display
-		        return driver.findElement(errorMessage).getText();
-		    }
+		    
 		    
 		    public void Registeronlogin() {
 		    	driver.findElement(Register_onlogin).click();
 		    }
-		    public String getregistrationpagetitle() {
+		    public String getregisterpagetitle() {
 		   	 
 		    	driver.findElement(Register_onlogin).click();
-		    	String registrationpagetitle = driver.getTitle();
-		    	return registrationpagetitle;
+		    	String registerpagetitle = driver.getTitle();
+		    	return registerpagetitle;
 		    	 
 		     }
-		    public void navigatetoRegistrationpage() {
+		    public void navigatetoRegisterpage() {
 		    	driver.findElement(SignIn);
 		    }
 		    
@@ -89,9 +99,8 @@ public class LoginPage {
 		        return new Homepage(driver);  // Assuming successful login navigates to HomePage
 		    }
 
-	
-
 			public By getPassword_field() {
+			driver.findElement(Username_field);
 				return Password_field;
 			}
 
@@ -99,9 +108,9 @@ public class LoginPage {
 				Password_field = password_field;
 			}
 
-			public static String getSuccessMessage() {
-		
-				return getSuccessMessage();
+			public  String getYouareloggedin() {
+			return driver.findElement(Youareloggedin).getText();
+	  
 			}
 
 			
