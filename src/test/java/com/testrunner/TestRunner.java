@@ -1,7 +1,5 @@
 package com.testrunner;
 
-import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
 import org.testng.annotations.DataProvider;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -14,11 +12,11 @@ import io.cucumber.testng.CucumberOptions;
     plugin = {"pretty", "html:target/cucumberreports.html"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
-//	
-//	@Override
-//	@DataProvider(parallel = false) 
-//	 public Object[][] scenarios() 
-//	{
-//	   return super.scenarios(); 
-//	   }
+	
+	@Override
+	@DataProvider(parallel = false) 
+	 public Object[][] scenarios() 
+	{
+	   return super.scenarios(); 
+	   }
  }

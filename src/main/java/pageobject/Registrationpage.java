@@ -15,6 +15,7 @@ public class Registrationpage {
 	By Login_registration = By.xpath("//a[@href='/login']");
 	private By errormsg_register = By.xpath("//div[contains(@class, 'alert') and @role='alert']");
 	private By successmsg = By.xpath(" //div[contains(text(), 'New Account Created.')]");
+	private By userId = By.xpath(" //*[@id=\"navbarCollapse\"]/div[2]/ul/a[2]");
 
 	public Registrationpage(WebDriver Driver) {
 
@@ -113,11 +114,15 @@ public class Registrationpage {
 	
 	public String successregistrationmsg() {
 		    	
-		String text = driver.findElement(errormsg_register).getText();
+		String text = driver.findElement(successmsg).getText();
 		
 		    	return text ;
 		
 		
+	}
+   public String userid() {
+		String userid = driver.findElement(userId).getText();
+		return userid;
 	}
 		
 	}
