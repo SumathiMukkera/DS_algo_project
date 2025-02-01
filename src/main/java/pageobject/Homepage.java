@@ -2,12 +2,9 @@ package pageobject;
 
 import java.util.List;
 
-import org.apache.hc.core5.util.Timeout;
-import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Homepage {
 
