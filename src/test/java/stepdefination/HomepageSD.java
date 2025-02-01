@@ -2,7 +2,6 @@ package stepdefination;
 
 import org.testng.Assert;
 
-import com.DriverFactory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,7 +9,7 @@ import pageobject.Homepage;
 
 public class HomepageSD {
 	
-	public Homepage home = new Homepage(DriverFactory.getDriver());
+	public Homepage home = new Homepage(com.webdrivermanager.DriverFactory.getDriver());
 	
 	@Given("The user is on the DS Algo Portal")
 	public void the_user_is_on_the_ds_algo_portal() {
