@@ -21,8 +21,6 @@ public class DataStructurespage {
     }
     
 
-    // Locators
-    private By homeGetStarted = By.xpath("//button[@class='btn']");
     private By dsGetStarted = By.xpath("//a[@href ='data-structures-introduction']");
     private By timeComplexity = By.xpath("//a[normalize-space()='Time Complexity']");
     private By tryHereButton = By.xpath("//a[normalize-space()='Try here>>>']");
