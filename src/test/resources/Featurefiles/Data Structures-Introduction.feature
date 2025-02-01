@@ -18,15 +18,16 @@ Feature: Data-Structure Intrudoction module
    Then The user should be redirected to a page having an try Editor with a Run button to test
    
    Scenario Outline: Navigate through data structures and execute Python code
-    Given user have to fetch python code from Excel file from sheet "<Sheet1>" and <rowNumber>  and click run button
+    Given user have to fetch python code from Excel file from sheet "<Sheet1>" and <rowNumber>
+    When  click run button
     Then user execute the Python code and validate the result
     Examples:
             |  Sheet1    | rowNumber |
+            | Try Editor | 0         |
             | Try Editor | 1         |
             | Try Editor | 2         |
-            | Try Editor | 3         |
       
-   
+ 
    Scenario: Verify that user is able to navigate to Practice Questions page   
    Given The user is in the Time Complexity page
    When The user clicks practice Questions button

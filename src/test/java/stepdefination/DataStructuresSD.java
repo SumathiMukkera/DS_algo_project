@@ -1,34 +1,36 @@
 package stepdefination;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.openqa.selenium.WebDriver;
+import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
 import org.testng.Assert;
 
-import com.DriverFactory.DriverFactory;
+import com.commonfunctions.tryEditor;
 import com.hooks.Loginbase;
-import com.utilities.ExcelfileReader;
+import com.webdrivermanager.DriverFactory;
 
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+//import pageobject.Commonpage;
 import pageobject.DataStructurespage;
-import pageobject.Homepage;
 
 public class DataStructuresSD {
-
-    private WebDriver driver;
-    public DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
-    public Loginbase login = new Loginbase();
-
+	
+    
+   private  DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
+    Loginbase login = new Loginbase();
+    tryEditor editor = new tryEditor(DriverFactory.getDriver());
+    
+	
     @Before("@DS_Introduction")
     public void login() throws IOException {
+
         login.getlogindetails();
     }
 
@@ -52,7 +54,7 @@ public class DataStructuresSD {
     }
 
     @When("The user clicks Time Complexity button on Data Structures- Intoduction page")
-    public void the_user_clicks_time_complexity_button_on_data_structures_intoduction_page() {   //failed scenario
+    public void the_user_clicks_time_complexity_button_on_data_structures_intoduction_page() {   
     	
     	datapage.clickTimeComplexity();
     }
@@ -76,7 +78,7 @@ public class DataStructuresSD {
     }
 
     @When("the user clicks Try here button on Time Complexity page")
-    public void the_user_clicks_try_here_button_on_time_complexity_page() {     //failed scenario
+    public void the_user_clicks_try_here_button_on_time_complexity_page() {    
     	 
       	datapage.clickTimeComplexity();
         datapage.clickTryHere();
@@ -90,44 +92,45 @@ public class DataStructuresSD {
         Assert.assertEquals(text, "Assessment");
     }
 
-    @Given("user have to fetch python code from Excel file from sheet {string} and {int}  and click run button")  //failed scenario
-    public void user_have_to_fetch_python_code_from_excel_file_from_sheet_and_and_click_run_button(String sheetName, Integer rowNumber)  throws InvalidFormatException {
-    	 
-        	datapage.clickTimeComplexity();
-     	    datapage.clickTryHere();
-       
-        try {
-        	 String filepath = "src/test/resources/Exceltestdata/ExcelTestdata.xlsx";
-        	 ExcelfileReader reader = new ExcelfileReader();
-			List<Map<String, String>> excelData = reader.getData(filepath, sheetName);
-            String pythonCode = excelData.get(rowNumber).get("Pythoncode");
-            datapage.enterPythonCode(pythonCode);
-            datapage.clickRun();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @Given("user have to fetch python code from Excel file from sheet {string} and {int}")
+    public void user_have_to_fetch_python_code_from_excel_file_from_sheet_and(String sheetName, Integer rowNumber)  throws IOException, OpenXML4JException {
+        
+           	datapage.clickTimeComplexity();
+      	    datapage.clickTryHere();
+      	    editor.getExceldata(sheetName, rowNumber);
+             
+           	
     }
 
-    
-    @Then("user execute the Python code and validate the result")
-    public void user_execute_the_python_code_and_validate_the_result() throws InvalidFormatException, IOException {
-    	 String filepath = "src/test/resources/Exceltestdata/ExcelTestdata.xlsx";
-    	 ExcelfileReader reader = new ExcelfileReader();
-		String sheetName = "Try Editor";
-		List<Map<String, String>> excelData = reader.getData(filepath, sheetName);
-		System.out.println(excelData.size());
-		System.out.println("exceldata"+ excelData);
-		String Results = null;
-		for(int i = 0; i<excelData.size(); i++) {
-		 Results =excelData.get(i).get("Results");
-		System.out.println(Results);
-		}
-		 String actualresult = datapage.getResult();
-        System.out.println("Execution result: " + actualresult);
-        Assert.assertEquals(actualresult, Results );
-		
+    @When("click run button")
+    public void click_run_button() {
+    	
+    	editor.runButton();
     }
     
+    @Then("user execute the Python code and validate the result")
+    public void user_execute_the_python_code_and_validate_the_result() throws IOException, InvalidFormatException {
+    	 String actualoutput;
+    	
+		if(editor.isAlertPresent()) {
+			
+		 actualoutput = editor.handleAlert();
+		 System.out.println(actualoutput);
+		} 
+		else {
+			
+		   actualoutput =	editor.getOutput();
+		   System.out.println(actualoutput);
+		}
+
+		List<String> expectedResultsList = editor.getexpectedResults().stream()
+	            .map(String::trim)  // Trim any spaces
+	            .filter(expected -> !expected.isEmpty())  // Remove empty strings
+	            .collect(Collectors.toList());
+		 boolean matchFound = expectedResultsList.stream()
+			        .anyMatch(expected -> expected.equalsIgnoreCase(actualoutput != null ? actualoutput.trim() : ""));
+			    Assert.assertTrue(matchFound);
+    }
 
     @When("The user clicks practice Questions button")
     public void the_user_clicks_practice_questions_button() {  //failed scenario
