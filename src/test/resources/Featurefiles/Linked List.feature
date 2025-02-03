@@ -47,5 +47,100 @@ Open Linked list module in DS-algo portal
             | Try Editor | 0         |
             | Try Editor | 1         |
             | Try Editor | 2         |
+ 	Scenario: verify user able to navigate to Types of Linked List page 
+ 	When user clicks Types of Linked List page button on linked list page
+ 	Then user navigato to Types of Linked List page 
  	
- 
+ 	Scenario: verify user navigate to tryeditor from Types of Linked List page 
+ 	When user clicks tryhere button on Types of Linked List page 
+ 	Then user navigate to assessment page of Types of Linked List page 
+ 	
+ 	Scenario Outline: verift user able to enter python code and execute it for Types of Linked List page assessment
+ 	Given user needs read python code from excelfile sheet  "<Sheet1>" and <rowNumber>
+  When user clicks run button to test python code
+  Then user able to see output in console and alert message
+     Examples:
+            |  Sheet1    | rowNumber |
+            | Try Editor | 0         |
+            | Try Editor | 1         |
+            | Try Editor | 2         |
+ 	
+ 	Scenario: verify user able to navigate to Implement Linked List in Python
+ 	When user clicks Implement Linked List in Python button on linked list page
+ 	Then user navigato to Implement Linked List in Python 
+ 	
+ 	Scenario: verify user navigate to tryeditor from Implement Linked List in Python
+  When user clicks tryhere button on Implement Linked List in Python 
+ 	Then user navigate to assessment page of Implement Linked List in Python
+
+ 	Scenario Outline: verift user able to enter python code and execute it for Implement Linked List in Python assessment
+ 	Given user needs to read python code from excelfile sheet  "<Sheet1>" and <rowNumber> for Implement Linked List in Python
+  When user clicks run button to test python code for Implement Linked List in Python assessment
+  Then user able to see output in console and alert message for Implement Linked List in Python
+     Examples:
+            |  Sheet1    | rowNumber |
+            | Try Editor | 0         |
+            | Try Editor | 1         |
+            | Try Editor | 2         |
+ 	Scenario: verify user able to navigate to Traversal page
+ 	When user clicks Traversal button on linked list page
+ 	Then user navigato to Traversal page
+ 	
+ 	Scenario: verify user navigate to tryeditor from Traversal page
+  When user clicks tryhere button on Traversal page
+ 	Then user navigate to assessment page of Traversal page
+
+ 	Scenario Outline: verift user able to enter python code and execute it forTraversal assessment
+ 	Given user needs to read python code from excelfile sheet  "<Sheet1>" and <rowNumber> for Traversal
+  When user clicks run button to test python code for Traversal assessment
+  Then user able to see output in console and alert message for Traversal
+     Examples:
+            |  Sheet1    | rowNumber |
+            | Try Editor | 0         |
+            | Try Editor | 1         |
+            | Try Editor | 2         |
+            
+  Scenario: verify user able to navigate to Insertion page
+ 	When user clicks Insertion button on linked list page
+ 	Then user navigato to Insertion page
+ 	
+ 	Scenario: verify user navigate to tryeditor from Insertion page
+  When user clicks tryhere button on Insertion page
+ 	Then user navigate to assessment page of Insertion page
+
+ 	Scenario Outline: verift user able to enter python code and execute it for Insertion assessment
+ 	Given user needs to read python code from excelfile sheet  "<Sheet1>" and <rowNumber> for Insertion
+  When user clicks run button to test python code for Insertion assessment
+  Then user able to see output in console and alert message for Insertion
+     Examples:
+            |  Sheet1    | rowNumber |
+            | Try Editor | 0         |
+            | Try Editor | 1         |
+            | Try Editor | 2         |
+            
+   Scenario: verify user able to navigate to Deletion page
+ 	When user clicks Deletion button on linked list page
+ 	Then user navigato to Deletion page
+ 	
+ 	Scenario: verify user navigate to tryeditor from Deletion page
+  When user clicks tryhere button on Deletion page
+ 	Then user navigate to assessment page of Deletion page
+
+ 	Scenario Outline: verift user able to enter python code and execute it for Deletion assessment
+ 	Given user needs to read python code from excelfile sheet  "<Sheet1>" and <rowNumber> for Deletion
+  When user clicks run button to test python code for Deletion assessment
+  Then user able to see output in console and alert message for Deletion
+     Examples:
+            |  Sheet1    | rowNumber |
+            | Try Editor | 0         |
+            | Try Editor | 1         |
+            | Try Editor | 2         |     
+            
+   Scenario: Verify that user is able to navigate to Practice Questions page for Linked List 
+   Given The user is in the Deletion page
+   When The user clicks practice Questions button on Deletion page
+   Then The user should be redirected to Practice Questions of Linked List  page
+   
+   Scenario: verify user able to see practice questions links
+   When user is on practice questions page of linkedlist
+   Then user should see practice question on linked list assessment page           
