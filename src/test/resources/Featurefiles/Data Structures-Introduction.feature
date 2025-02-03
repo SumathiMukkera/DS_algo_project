@@ -32,3 +32,7 @@ Feature: Data-Structure Intrudoction module
    Given The user is in the Time Complexity page
    When The user clicks practice Questions button
    Then The user should be redirected to Practice Questions of Data structures-Introduction
+   
+   Scenario: verify user able to see practice questions links in datastructurespage
+   When user is on practice questions page of datastructurespage
+   Then user should see practice question on datastructurespage assessment page      
