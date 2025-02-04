@@ -21,7 +21,8 @@ import io.cucumber.testng.CucumberOptions;
     glue = {"stepdefination", "com.hooks"},
     plugin = {"pretty", "html:target/cucumberreports.html",
     		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-    		  "json:target/cucumber-report.json"},
+    		  "json:target/cucumber-report.json",
+	     "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
     monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
