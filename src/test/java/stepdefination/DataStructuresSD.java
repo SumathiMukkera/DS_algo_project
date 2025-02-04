@@ -2,7 +2,6 @@ package stepdefination;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -11,13 +10,13 @@ import org.testng.Assert;
 
 import com.commonfunctions.tryEditor;
 import com.hooks.Loginbase;
+import com.utilities.LoggerLoad;
 import com.webdrivermanager.DriverFactory;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-//import pageobject.Commonpage;
 import pageobject.DataStructurespage;
 
 public class DataStructuresSD {
@@ -31,17 +30,20 @@ public class DataStructuresSD {
 	public void login() throws IOException {
 
 		login.getlogindetails();
+		LoggerLoad.info("user login into ds algo portal");
 	}
 
 	@Given("The user is in the Home page after logged in")
 	public void the_user_is_in_the_home_page_after_logged_in() {
 		System.out.println(datapage.getHomePageTitle());
 		Assert.assertTrue(datapage.getHomePageTitle().contains("NumpyNinja"), "NumpyNinja");
+		LoggerLoad.info("user is on home page");
 	}
 
 	@When("The user clicks on Get Started button Data Structures - Introduction")
 	public void the_user_clicks_on_get_started_button_data_structures_introduction() {
 		datapage.clickDSGetStarted();
+		LoggerLoad.info("user navigate to data structure intoduction module");
 	}
 
 	@Then("The user should land in Data Structures- Introduction Page")
@@ -50,12 +52,14 @@ public class DataStructuresSD {
 		String title = datapage.getDSIntroPageTitle();
 		System.out.println(title);
 		Assert.assertTrue(title.contains("Data Structures-Introduction"), "Data Structures-Introduction");
+		LoggerLoad.info("user is on data structure intoduction page ");
 	}
 
 	@When("The user clicks Time Complexity button on Data Structures- Intoduction page")
 	public void the_user_clicks_time_complexity_button_on_data_structures_intoduction_page() {
 
 		datapage.clickTimeComplexity();
+		LoggerLoad.info("user cilcks time complexity link");
 	}
 
 	@Then("The user should be redirected to Time Complexity of Data structures-Introduction")
@@ -64,7 +68,8 @@ public class DataStructuresSD {
 		datapage.clickTimeComplexity();
 		String title = datapage.getTimeComplexityTitle();
 		System.out.println(title);
-		Assert.assertTrue(title.contains("Time Complexity"), "Time Complexity");
+		Assert.assertEquals(title, "Time Complexity");
+		LoggerLoad.info("user re directed to time complexity");
 	}
 
 	@Given("The user is in the Time Complexity page")
@@ -73,7 +78,7 @@ public class DataStructuresSD {
 		datapage.clickTimeComplexity();
 		String title = datapage.getTimeComplexityTitle();
 		Assert.assertEquals(title, "Time Complexity");
-
+		LoggerLoad.info("user is in time complexity page");
 	}
 
 	@When("the user clicks Try here button on Time Complexity page")
@@ -81,6 +86,7 @@ public class DataStructuresSD {
 
 		datapage.clickTimeComplexity();
 		datapage.clickTryHere();
+		LoggerLoad.info("");
 	}
 
 	@Then("The user should be redirected to a page having an try Editor with a Run button to test")
@@ -89,6 +95,7 @@ public class DataStructuresSD {
 		String text = datapage.getTryHerePageTitle();
 		System.out.println(text);
 		Assert.assertEquals(text, "Assessment");
+		LoggerLoad.info("user is on assessment page");
 	}
 
 	@Given("user have to fetch python code from Excel file from sheet {string} and {int}")
@@ -98,6 +105,7 @@ public class DataStructuresSD {
 		datapage.clickTimeComplexity();
 		datapage.clickTryHere();
 		editor.getExceldata(sheetName, rowNumber);
+		LoggerLoad.info("user entering python code in try editor box");
 
 	}
 
@@ -105,6 +113,7 @@ public class DataStructuresSD {
 	public void click_run_button() {
 
 		editor.runButton();
+		LoggerLoad.info("user clickes run button");
 	}
 
 	@Then("user execute the Python code and validate the result")
@@ -127,12 +136,14 @@ public class DataStructuresSD {
 		boolean matchFound = expectedResultsList.stream()
 				.anyMatch(expected -> expected.equalsIgnoreCase(actualoutput != null ? actualoutput.trim() : ""));
 		Assert.assertTrue(matchFound);
+		LoggerLoad.info("user able to see output or alert window");
 	}
 
 	@When("The user clicks practice Questions button")
 	public void the_user_clicks_practice_questions_button() { // failed scenario
 		datapage.clickTimeComplexity();
 		datapage.clickPracticeQuestions();
+		LoggerLoad.info("user is in practice questions page");
 	}
 
 	@Then("The user should be redirected to Practice Questions of Data structures-Introduction")
@@ -140,6 +151,7 @@ public class DataStructuresSD {
 		String title = datapage.getPracticeQuestionsPageTitle();
 		System.out.println(title);
 		Assert.assertEquals(title, "Practice Questions");
+		LoggerLoad.info("user is in practice questions page");
 	}
 
 	@When("user is on practice questions page of datastructurespage")
@@ -148,11 +160,13 @@ public class DataStructuresSD {
 		datapage.clickPracticeQuestions();
 		String title = datapage.getPracticeQuestionsPageTitle();
 		Assert.assertEquals(title, "Practice Questions");
+		LoggerLoad.info("user is in practice questions page");
 	}
 
 	@Then("user should see practice question on datastructurespage assessment page")
 	public void user_should_see_practice_question_on_datastructurespage_assessment_page() {
 		 Assert.assertTrue(Questions, "Practice Questions links");
+		 LoggerLoad.info("user is in practice questions page");
 	}
 
 }
