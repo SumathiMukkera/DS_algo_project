@@ -6,6 +6,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 //import com.aventstack.extentreports.gherkin.model.Scenario;
 import com.utilities.configFileReader;
 import com.webdrivermanager.DriverFactory;
@@ -16,10 +18,10 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 
-	
+	private static ExtentTest test;
 	private DriverFactory driverFactory;
 	private WebDriver driver;
-	private configFileReader configReader;
+	private configFileReader configReader=new configFileReader();
 	Properties prop;
 	
 	@Before(order =0)
@@ -29,7 +31,7 @@ public class Hooks {
 	}
 	
 	@Before(order =1)
-	public void launchBrowser() {
+	public void beforeScenario() {
 		String browsername=prop.getProperty("browser");
 		String urlname=prop.getProperty("url");
 		driverFactory = new DriverFactory();
@@ -37,6 +39,7 @@ public class Hooks {
 		DriverFactory.getDriver().get(urlname);
 		
 	}
+
 	
 	@After(order =0)
 	public void quitBrowser() {
@@ -46,12 +49,16 @@ public class Hooks {
 	@After(order=1)
 	public void tearDown(Scenario scenario){
 		if(scenario.isFailed()) {
-			//take screenshot:
+//			take screenshot:
 			String screenshotName = scenario.getName().replaceAll("", "_");
 			byte [] sourcePath=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(sourcePath, "image/png", screenshotName);
-		}
 	}
 	
+	}
 }
+
+	
+	
+
 

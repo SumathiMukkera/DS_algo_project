@@ -20,6 +20,7 @@ import pageobject.Stackpage;
 
 public class StackSD {
 	
+	private static final boolean Questions = false;
 	private Stackpage stack = new Stackpage(DriverFactory.getDriver());
 	private tryEditor editor = new tryEditor(DriverFactory.getDriver());
 	private DataStructurespage data = new DataStructurespage(DriverFactory.getDriver());
@@ -255,7 +256,7 @@ public class StackSD {
 	@Then("user should see practice question on stack assessment page")
 	public void user_should_see_practice_question_on_stack_assessment_page() {
 	  
-		 Assert.assertTrue(false, "Practice Questions links");
+		 Assert.assertTrue(Questions, "Practice Questions links");
 	}
 
 

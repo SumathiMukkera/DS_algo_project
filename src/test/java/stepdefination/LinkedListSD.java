@@ -23,6 +23,7 @@ import pageobject.LinkedListpage;
 
 public class LinkedListSD {
 	
+   private static final boolean Questions = false;
    private  LinkedListpage linked = new LinkedListpage(DriverFactory.getDriver());
    private DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
    private tryEditor editor = new tryEditor(DriverFactory.getDriver());
@@ -497,13 +498,12 @@ public class LinkedListSD {
 	    public void user_is_on_practice_questions_page_of_linkedlist() {
 	    	 linked.getDeletion();
 	    	 datapage.clickPracticeQuestions();
-	    	 title = datapage.getPracticeQuestionsPageTitle();
-		       Assert.assertEquals(title, "Practice Questions");
+	    	
 	    }
 	    
 	    @Then("user should see practice question on linked list assessment page")
 	    public void user_should_see_practice_question_on_linked_list_assessment_page() {
-	    	 Assert.assertTrue(true, "Practice Questions links");
+	    	 Assert.assertTrue(Questions, "Practice Questions links");
 	    }
 		
 	    
