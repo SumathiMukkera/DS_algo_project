@@ -22,6 +22,7 @@ import pageobject.DataStructurespage;
 
 public class DataStructuresSD {
 
+	private static final boolean Questions = false;
 	private DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
 	Loginbase login = new Loginbase();
 	tryEditor editor = new tryEditor(DriverFactory.getDriver());
@@ -151,8 +152,7 @@ public class DataStructuresSD {
 
 	@Then("user should see practice question on datastructurespage assessment page")
 	public void user_should_see_practice_question_on_datastructurespage_assessment_page() {
-		Assert.assertEquals(true, "Practice Questions links");
-
+		 Assert.assertTrue(Questions, "Practice Questions links");
 	}
 
 }
