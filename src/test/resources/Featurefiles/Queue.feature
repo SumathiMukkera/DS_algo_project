@@ -2,7 +2,7 @@
 Feature: Queue
   To Open Queue data structure module in DS-algo Portal
   
-  Background: Verify user able to navigate Queue page
+ Background: Verify user able to navigate Queue page
 Given The user is in the Home page after logged in
 When The user clicks on Get Started button for Queue
 Then The user should land in Queue Page
