@@ -3,7 +3,7 @@ Feature: Graph module
  Open graph module in DS-algo portal
   
 Background: Verify that user is able to navigate to Graph page	
-	Given The user is in the Home page after Sign in	
+	Given The user is in the Home page after Sign in for graph
 	When The user clicks the Get Started button for Graph	
 	Then The user should land on the Graph Page 
 	

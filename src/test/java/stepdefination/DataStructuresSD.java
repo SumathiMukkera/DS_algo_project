@@ -25,7 +25,7 @@ public class DataStructuresSD {
 	private DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
 	Loginbase login = new Loginbase();
 	tryEditor editor = new tryEditor(DriverFactory.getDriver());
-
+     
 	@Before("@DS_Introduction")
 	public void login() throws IOException {
 
@@ -33,8 +33,8 @@ public class DataStructuresSD {
 		LoggerLoad.info("user login into ds algo portal");
 	}
 
-	@Given("The user is in the Home page after logged in")
-	public void the_user_is_in_the_home_page_after_logged_in() {
+	@Given("The user is in the Home page after logged in for datastructures")
+	public void the_user_is_in_the_home_page_after_logged_in_for_datastructures() {
 		System.out.println(datapage.getHomePageTitle());
 		Assert.assertTrue(datapage.getHomePageTitle().contains("NumpyNinja"), "NumpyNinja");
 		LoggerLoad.info("user is on home page");
@@ -98,8 +98,8 @@ public class DataStructuresSD {
 		LoggerLoad.info("user is on assessment page");
 	}
 
-	@Given("user have to fetch python code from Excel file from sheet {string} and {int}")
-	public void user_have_to_fetch_python_code_from_excel_file_from_sheet_and(String sheetName, Integer rowNumber)
+	@Given("user have to fetch python code from Excel file from sheet {string} and {int}for datastructure module")
+	public void user_have_to_fetch_python_code_from_excel_file_from_sheet_and_for_datastructure_module(String sheetName, Integer rowNumber)
 			throws IOException, OpenXML4JException {
 
 		datapage.clickTimeComplexity();
@@ -109,15 +109,15 @@ public class DataStructuresSD {
 
 	}
 
-	@When("click run button")
-	public void click_run_button() {
+	@When("click run button for datastructures")
+	public void click_run_button_for_datastructures() {
 
 		editor.runButton();
 		LoggerLoad.info("user clickes run button");
 	}
 
-	@Then("user execute the Python code and validate the result")
-	public void user_execute_the_python_code_and_validate_the_result() throws IOException, InvalidFormatException {
+	@Then("user execute the Python code and validate the result for datastructures")
+	public void user_execute_the_python_code_and_validate_the_result_for_datastructures() throws IOException, InvalidFormatException {
 		String actualoutput;
 
 		if (editor.isAlertPresent()) {
@@ -139,8 +139,8 @@ public class DataStructuresSD {
 		LoggerLoad.info("user able to see output or alert window");
 	}
 
-	@When("The user clicks practice Questions button")
-	public void the_user_clicks_practice_questions_button() { // failed scenario
+	@When("The user clicks practice Questions button in datastructures page")
+	public void the_user_clicks_practice_questions_button_in_datastructures_page() { // failed scenario
 		datapage.clickTimeComplexity();
 		datapage.clickPracticeQuestions();
 		LoggerLoad.info("user is in practice questions page");
@@ -166,7 +166,7 @@ public class DataStructuresSD {
 	@Then("user should see practice question on datastructurespage assessment page")
 	public void user_should_see_practice_question_on_datastructurespage_assessment_page() {
 		 Assert.assertTrue(Questions, "Practice Questions links");
-		 LoggerLoad.info("user is in practice questions page");
+		 LoggerLoad.error("user is in practice questions page");
 	}
 
 }

@@ -7,15 +7,14 @@ import java.util.stream.Collectors;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 
-import com.DriverFactory.DriverFactory;
+import com.commonfunctions.tryEditor;
 import com.hooks.Loginbase;
-import com.utilities.tryEditor;
+import com.webdrivermanager.DriverFactory;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageobject.DataStructurespage;
 import pageobject.Graphpage;
 
 
@@ -37,8 +36,8 @@ public class GraphSD {
 	
     
 	
-	@Given("The user is in the Home page after Sign in")
-	public void the_user_is_in_the_home_page_after_sign_in() {
+	@Given("The user is in the Home page after Sign in for graph")
+	public void the_user_is_in_the_home_page_after_sign_in_for_graph() {
 		String title = graph.getHomePageTitle();
  		System.out.println(title);
  		Assert.assertEquals(title, "NumpyNinja"); 
@@ -58,8 +57,8 @@ public class GraphSD {
 
 	@Given("The user is in the Graph page after Signin graph")
 	public void the_user_is_in_the_graph_page_after_signin_graph() {
-		//String title = graph.getGraphPageTitle();
-	       //Assert.assertEquals(title, "Graph");
+		String title = graph.getGraphPageTitle();
+	       Assert.assertEquals(title, "Graph");
 	}
 
 	@When("The user clicks inside the Graph button")
@@ -71,7 +70,7 @@ public class GraphSD {
 
 	@Then("The user should be redirected to Graph page")
 	public void the_user_should_be_redirected_to_graph_page() {
-		graph.clickGraph();
+		//graph.clickGraph();
         String title = graph.getGraphPageTitle();
         Assert.assertEquals(title, "Graph");
 	}
@@ -140,13 +139,14 @@ public class GraphSD {
 
 	@Given("The user is on the Graph Representation page")
 	public void the_user_is_on_the_graph_representation_page() {
+		graph.clickGraphRepresentations();
 		String title = graph.getGraphRepresentations();
         Assert.assertEquals(title, "Graph Representations");
 	}
 
 	@When("The user click TryHere button in Graph Representation page")
 	public void the_user_click_try_here_button_in_graph_representation_page() {
-		graph.clickGraphRepresentations();
+		
 		editor.clickTryHere();
 	}
 
@@ -158,7 +158,7 @@ public class GraphSD {
 
 	@Given("user get python code from excelfile sheet  {string} and {int} for Graph Representation page")
 	public void user_get_python_code_from_excelfile_sheet_and_for_graph_representation_page(String sheetNamee, Integer rowNumber) throws InvalidFormatException, IOException  {
-			graph.clickGraph();
+		  graph.clickGraphRepresentations();
 			editor.clickTryHere();
 			editor.getExceldata(sheetNamee, rowNumber);
 	}
@@ -196,11 +196,12 @@ public class GraphSD {
 	
 	
 
-	@When("The user clicks on Practice Questions Link of Graph")
+	@When("The user clicks on Practice Questions Link	of Graph")
 	public void the_user_clicks_on_practice_questions_link_of_graph() {
+		graph.clickGraphRepresentations();
 		graph.clickPracticeQuestions();
 		//graph.clickPracticeQuestions();
-	};
+	}
 
 	@Then("The user be directed to Practice Questions page of Graph")
 	public void the_user_be_directed_to_practice_questions_page_of_graph() {
@@ -210,7 +211,7 @@ public class GraphSD {
 
 	@When("user is on practice questions page of Graph")
 	public void user_is_on_practice_questions_page_of_graph() {
-		graph.getGraphRepresentations();
+		graph.clickGraphRepresentations();
 		graph.clickPracticeQuestions();
 	}
 	

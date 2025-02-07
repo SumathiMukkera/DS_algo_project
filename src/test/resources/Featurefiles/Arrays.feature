@@ -25,9 +25,9 @@ Background:
 
     Examples:
       | sheetName | rowNumber |
-      | TryEditor | 0        |
-      | TryEditor | 1        |
-      | TryEditor | 3         |
+      | Try Editor | 0        |
+      | Try Editor | 1        |
+      | Try Editor | 2         |
       
    Scenario: Verify that user navigate to Array Using List  page
    Given  The user is on the Arrays page
@@ -46,9 +46,9 @@ Background:
 
     Examples:
      | sheetName | rowNumber |
-     | TryEditor | 0         |
-     | TryEditor | 1        |
-     | TryEditor  | 2       |
+     | Try Editor | 0         |
+     | Try Editor | 1        |
+     | Try Editor  | 2       |
       
      Scenario: Verify that user navigate to Basic Operations in Lists page 
      Given The user  on the Arrays Using List page 
@@ -67,9 +67,9 @@ Background:
 
     Examples:
       | sheetName | rowNumber |
-      | TryEditor   | 0        |
-      | TryEditor   | 1        |
-      | TryEditor   | 2        |
+      | Try Editor   | 0        |
+      | Try Editor   | 1        |
+      | Try Editor   | 2        |
       
     Scenario: Verify that user navigate to Applications of Array page    
     Given The user on the Basic Operations in Lists page
@@ -88,9 +88,9 @@ Background:
 
     Examples:
       | sheetName | rowNumber |
-      | TryEditor | 0         |
-      | TryEditor | 1        |
-      | TryEditor | 2         |
+      | Try Editor | 0         |
+      | Try Editor | 1        |
+      | Try Editor | 2         |
       
     Scenario: Verify that user navigate to Practice Questions Page  
     Given The user on Applications of Array page

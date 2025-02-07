@@ -2,7 +2,7 @@
 Feature: Queue
   To Open Queue data structure module in DS-algo Portal
   
-  Background: Verify user able to navigate Queue page
+ Background: Verify user able to navigate Queue page
 Given The user is in the Home page after logged in
 When The user clicks on Get Started button for Queue
 Then The user should land in Queue Page
@@ -17,8 +17,7 @@ Scenario: Verify that user is able to navigate to try Editor page
 Given user is on the Implementation of Queue in Python  page
 When The user clicks TryHere button in Implementation of Queue in Python page
 Then The user should be redirected to a  Implementation of Queue in Python  
- 
- 
+  
  Scenario Outline: verift user able to enter python code and execute for Implementation of Queue in Python
  	Given user get python code from excelfile sheet  "<Sheet1>" and <rowNumber> for implementation of queue
   When user clicks run button to test python code for implementation of queue

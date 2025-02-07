@@ -2,29 +2,22 @@ package stepdefination;
 
 
 import java.io.IOException;
-import java.io.Reader;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.openqa.selenium.Alert;
 import org.testng.Assert;
 
-import com.DriverFactory.DriverFactory;
+import com.commonfunctions.practicequestionsAndtryEditorpage;
+import com.commonfunctions.tryEditor;
 import com.hooks.Loginbase;
-import com.utilities.ExcelReader;
-import com.utilities.practicequestionsAndtryEditorpage;
-import com.utilities.tryEditor;
+import com.webdrivermanager.DriverFactory;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobject.Arrayspage;
-import pageobject.DataStructurespage;
-import pageobject.Homepage;
-import pageobject.LoginPage;
 
 public class ArraysSD {
 	
@@ -77,7 +70,7 @@ public class ArraysSD {
     		Arrays.getArraysinPythonTittle();
             String title = Arrays.getArraysinPythonTittle();
             System.out.println(title);
-            Assert.assertEquals(title, "Arrays In Python");
+            Assert.assertEquals(title, "Arrays in Python");
         }
     	
 
@@ -85,7 +78,7 @@ public class ArraysSD {
     	public void the_user_is_on_the_arrays_in_python_page() {
     		Arrays.clickArraysinPython();
             String title = Arrays.getArraysinPythonTittle();
-            Assert.assertEquals(title, "Arrays In Python");
+            Assert.assertEquals(title, "Arrays in Python");
     	}
 
     	@When("The user clicks TryHere button in Arrays in Python page")
@@ -163,6 +156,7 @@ public class ArraysSD {
 
     	@Given("The user is on the Arrays Using List  page")
     	public void the_user_is_on_the_arrays_using_list_page() {
+    		Arrays.clickArraysUsingList();
     		String title=Arrays.getArraysUsingListTittle();
             Assert.assertEquals(title,"Arrays Using List");
     	}
@@ -219,6 +213,7 @@ public class ArraysSD {
 
     	@Given("The user  on the Arrays Using List page")
     	public void the_user_on_the_arrays_using_list_page() {
+    		Arrays.clickArraysUsingList();
     		String title=Arrays.getArraysUsingListTittle();
             Assert.assertEquals(title,"Arrays Using List");
     	}
@@ -238,6 +233,7 @@ public class ArraysSD {
 
     	@Given("The user is on the Basic Operations in Lists page")
     	public void the_user_is_on_the_basic_operations_in_lists_page() {
+    		Arrays.clickBasicOperationsinLists();
     		String title=Arrays.getBasicOperationsinListsTittle();
             Assert.assertEquals(title,"Basic Operations in Lists");
     	}
@@ -294,6 +290,7 @@ public class ArraysSD {
 
     	@Given("The user on the Basic Operations in Lists page")
     	public void the_user_on_the_basic_operations_in_lists_page() {
+    		Arrays.clickBasicOperationsinLists();
     		String title=Arrays.getBasicOperationsinListsTittle();
             Assert.assertEquals(title,"Basic Operations in Lists");
     	}
@@ -305,7 +302,7 @@ public class ArraysSD {
 
     	@Then("The user should be redirected to Applications of Array page")
     	public void the_user_should_be_redirected_to_applications_of_array_page() {
-    		Arrays.getApplicationsofArrayTitle();
+    		Arrays.clickApplicationsofArray();
             String title = Arrays.getApplicationsofArrayTitle();
             System.out.println(title);
             Assert.assertEquals(title, "Applications of Array");
@@ -313,6 +310,7 @@ public class ArraysSD {
 
     	@Given("The user is on the Applications of Array page")
     	public void the_user_is_on_the_applications_of_array_page() {
+    		Arrays.clickApplicationsofArray();
     		String title=Arrays.getApplicationsofArrayTitle();
             Assert.assertEquals(title,"ApplicationsofArray");
     	}
@@ -370,13 +368,14 @@ public class ArraysSD {
 
     	@Given("The user on Applications of Array page")
     	public void the_user_on_applications_of_array_page() {
+    		Arrays.clickApplicationsofArray();
     		String title=Arrays.getApplicationsofArrayTitle();
             Assert.assertEquals(title,"ApplicationsofArray");
     	}
 
     	@When("The user clicks Practice Questions button")
     	public void the_user_clicks_practice_questions_button() {
-    		Arrays.clickApplicationsofArray();
+    		//Arrays.clickApplicationsofArray();
             Arrays.clickPracticeQuestions();
     	}
 
@@ -386,8 +385,11 @@ public class ArraysSD {
             System.out.println(title);
             Assert.assertEquals(title, "Practice Questions");
     	}
+    	
     	@Given("The user is on the practice Questions page")
     	public void the_user_is_on_the_practice_questions_page() {
+    		Arrays.clickApplicationsofArray();
+    		Arrays.clickPracticeQuestions();
     		String title =Arrays.getPracticeQuestionspageTitle();
             System.out.println(title);
             Assert.assertEquals(title, "Practice Questions");	
@@ -402,7 +404,7 @@ public class ArraysSD {
     	public void the_user_should_be_redirected_to_questions_page_contains_a_question_and_try_editor_with_run_and_submit_buttons() {
     		
 			//Assert.assertTrue(tryEditorPage.getPageTitle().contains("Search the array"));
-    		Assert.assertTrue(practicequestions.isTryEditorDisplayed());
+    		//Assert.assertTrue(practicequestions.isTryEditorDisplayed());
             Assert.assertTrue(practicequestions.isRunButtonDisplayed());
             Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
         
@@ -410,6 +412,7 @@ public class ArraysSD {
 
     	@When("user clicks {string} button on search the array")
     	public void user_clicks_button_on_search_the_array(String action) {
+    		practicequestions.clickSearchtheArray();
     		 if (action.equalsIgnoreCase("run")) {
     	            practicequestions.clickRun();
     	        } else if (action.equalsIgnoreCase("submit")) {

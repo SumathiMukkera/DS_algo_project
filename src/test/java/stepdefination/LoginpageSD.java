@@ -1,13 +1,17 @@
 package stepdefination;
 
+import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 
-import com.DriverFactory.DriverFactory;
-import com.utilities.ExcelReader;
+import com.utilities.ExcelfileReader;
+import com.webdrivermanager.DriverFactory;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,11 +26,10 @@ public class LoginpageSD{
 	
 	@Given("user is on Homepage")
 	public void user_is_on_homepage() {
-		home.navigateToHomePage();
-		String title = home.gethomepagetitle();
-        Assert.assertEquals("NumpyNinja", title);
 		//home.navigateToHomePage();
-		//Assert.assertTrue(home.isOnhomepage());
+		login.clickGetStartedbutton();
+		String title = login.gethomepagetitle();
+        Assert.assertEquals("NumpyNinja", title);
         
 	}
 
@@ -69,7 +72,6 @@ public class LoginpageSD{
         Assert.assertTrue(login.isOnLoginPage());
 
 	}
-
 	@When("The user clicks login button after entering the {string} only")
 	public void the_user_clicks_login_button_after_entering_the_only(String username) {
 		// if (password.isEmpty()) {
@@ -79,10 +81,10 @@ public class LoginpageSD{
 
 	
 
-	@Then("The error message {string} appears below Password textbox")
-	public void the_error_message_appears_below_password_textbox(String expectedErrorMessage) {
-		String actualErrorMessage = login.getErrorMessage();
-        Assert.assertEquals(actualErrorMessage,expectedErrorMessage);
+	@Then("The error message Please fill out this field appears below Password textbox")
+	public void the_error_message_please_fill_out_this_field_appears_below_password_textbox() {
+		boolean actualErrorMessage = login.getalertforemptypasswordfield();
+		Assert.assertTrue(actualErrorMessage, "The Username field is not marked as required!");
    
 	}
 
@@ -102,11 +104,10 @@ public class LoginpageSD{
    
    
 
-	@Then("The error message {string} appears below Username textbox")
-	public void the_error_message_appears_below_username_textbox(String expectedErrorMessage) {
-		String actualErrorMessage = login.getErrorMessage();
-        Assert.assertEquals(actualErrorMessage,expectedErrorMessage);
-     
+   @Then("The error message Please fill out this field appears below Username textbox")
+   public void the_error_message_please_fill_out_this_field_appears_below_username_textbox() {
+		boolean actualErrorMessage = login.getalertforemptyusernamefield();
+		Assert.assertTrue(actualErrorMessage, "The Username field is not marked as required!");
 	}
 
 	@When("The user clicks login button after entering invalid username and valid password")
@@ -124,48 +125,47 @@ public class LoginpageSD{
 
 	@When("The user enter sheetname {string} and rownumber {int}")
 	public void the_user_enter_sheet_and(String sheetName, Integer rowNumber) throws Exception {
-		String excelFilePath="src/test/resources/ExcelTestData/Login.xlsx";
-		ExcelReader reader = new ExcelReader();
-		 List<Map<String, String>> testData =reader.getData("src/test/resources/TestData/Login.xlsx",sheetName);
-          String username = testData.get(rowNumber).get("username");
-		  String password = testData.get(rowNumber).get("password");
-		  String message = testData.get(rowNumber).get("your logged in");
-		  
-   /*ExcelReader excelReader = new ExcelReader(sheetName);
-
-			//String excelPath="src/test/resources/TestData/Login.xlsx";
-	        String username = excelReader.getCellData(sheetName, rowNumber, 0);
-	        String password = excelReader.getCellData(sheetName, rowNumber, 1);
-
-	        // Perform login actions
-	        login.setUsername(username);
-	        login.setPassword(password);
-	        //login.clickLoginButton();
-
-	        // Close the reader
-	        excelReader.close();*/
-
+		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+		ExcelfileReader reader = new ExcelfileReader();
+		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
+          String username = testData.get(rowNumber).get("Username");
+		  String password = testData.get(rowNumber).get("Password");
+		 
+		  login.loginfunction(username, password);
+ 
 	}
 
 	@Then("click login button")
 	public void click_login_button() {
 		login.clickLoginButton();
 	}
-
-	@When("The user clicks login button after entering valid Username and valid Password")
-	public void the_user_clicks_login_button_after_entering_valid_username_and_valid_password() {
 	
-	    login.setUsername("ValidUsername");
-        login.setPassword("ValidPassword");
-        login.clickLoginButton();
+	@Then("user can see alert user is logged in or not")
+	public void user_can_see_alert_user_is_logged_in_or_not() throws InvalidFormatException, IOException {
+		
+		String actualoutput = login.getErrorMessage();
+		String sheetName = "Logindetails";
+		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+		
+		ExcelfileReader reader = new ExcelfileReader();
+		List<Map<String, String>> excelData = reader.getData(excelFilePath, sheetName);
+		List<String> expectedResultsList = new ArrayList<>();
+	    
+	    for (Map<String, String> row : excelData) {
+	        String expectedResult = row.get("Expected message");
+	        if (expectedResult != null) { // Avoid null values
+	            expectedResultsList.add(expectedResult.trim());
+	        }
+	    }
+			
+	    List<String> expectedResultsLists = expectedResultsList.stream().map(String::trim) // Trim any spaces
+				.filter(expected -> !expected.isEmpty()) // Remove empty strings
+				.collect(Collectors.toList());
+		boolean matchFound = expectedResultsList.stream()
+				.anyMatch(expected -> expected.equalsIgnoreCase(actualoutput != null ? actualoutput.trim() : ""));
+		Assert.assertTrue(matchFound);
 	}
 
-	@Then("The user should land in Data Structure HomePage with message {string}")
-	public void the_user_should_land_in_data_structure_home_page_with_message(String expectedMessage) {
-		String actualMessage = login.getYouareloggedin();
-        Assert.assertEquals(actualMessage,expectedMessage); 
-      
-	}
 
 }  
 

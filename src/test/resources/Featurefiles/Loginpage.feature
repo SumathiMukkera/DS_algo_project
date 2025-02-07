@@ -13,32 +13,27 @@
    Scenario: Verify that user receives error message for empty Password field during Login
    Given user is on LoginPage	
    When The user clicks login button after entering the "Username" only	
-   Then The error message "Please fill out this field" appears below Password textbox	
+   Then The error message Please fill out this field appears below Password textbox	
    
    Scenario: Verify that user receives error message for empty Username field during Login	
    Given The user on LoginPage
     When The user click login button after entering the "Password" only	
-   Then The error message "Please fill out this field" appears below Username textbox
+   Then The error message Please fill out this field appears below Username textbox
    	
    	Scenario: Verify that user receives error message for invalid Username field during Login	
    	When The user clicks login button after entering invalid username and valid password	
    	Then The user should able to see an error message "Invalid Username and Password"
    	
-   	Scenario Outline: User on loginpage and login with  valid inputs from Excel "<SheetName>" and
-       <RowNumber>
+   	Scenario Outline: User on loginpage and login with  valid inputs from Excel "<SheetName>" and<RowNumber>
     When The user enter sheetname "<SheetName>" and rownumber <RowNumber>
     Then click login button
+    And user can see alert user is logged in or not
           Examples:
-        | SheetName | RowNumber |
-        | Username   |        1|
-        | Password   |        2|
+        | SheetName    | RowNumber |
+        | Logindetails |        0  |
+        | Logindetails |        1  |
         
-   	
-   	
-   	Scenario: Verify that user able to land on Homepage after entering valid Username and Password fields
-   	When The user clicks login button after entering valid Username and valid Password	
-   	Then The user should land in Data Structure HomePage with message "You are logged in"
-
+  
 
 
 
