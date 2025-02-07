@@ -28,7 +28,7 @@ Feature: Data-Structure Intrudoction module
             | Try Editor | 1         |
             | Try Editor | 2         |
       
- 
+  
    Scenario: Verify that user is able to navigate to Practice Questions page   
    Given The user is in the Time Complexity page
    When The user clicks practice Questions button in datastructures page

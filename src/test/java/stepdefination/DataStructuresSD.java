@@ -25,7 +25,7 @@ public class DataStructuresSD {
 	private DataStructurespage datapage = new DataStructurespage(DriverFactory.getDriver());
 	Loginbase login = new Loginbase();
 	tryEditor editor = new tryEditor(DriverFactory.getDriver());
-
+     
 	@Before("@DS_Introduction")
 	public void login() throws IOException {
 
