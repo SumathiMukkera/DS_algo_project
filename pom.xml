@@ -106,6 +106,14 @@
 <suiteXmlFiles>
 <suiteXmlFile>src/test/resources/testng/testng.xml</suiteXmlFile>
 </suiteXmlFiles>
+<properties>
+<dataproviderthreadcount>5</dataproviderthreadcount>
+<parrllell>tests</parrllell>
+<threadcount>7</threadcount>
+</properties>
+<systemPropertyVariables>
+<browser>chrome</browser>
+</systemPropertyVariables>
 </configuration>
 </plugin>
 </plugins>
