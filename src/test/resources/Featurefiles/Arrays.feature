@@ -102,27 +102,23 @@ Background:
     When  The user clicks the Search the array link
     Then The user should be redirected to Questions page contains a question,and TryEditor with Run and Submit buttons
     
-    Scenario Outline: Verify user actions with different code inputs
-    When user clicks "<action>" button on search the array
-    Then The user able to see the "<expected_result>" for Search the array
-
-    Examples: Test Cases from Excel
-      | action  | code_type       | expected_result                            |
-      | run     | invalid_code    | alert box with syntax error message        |
-      | submit  | invalid_code    | Error occurred during submission message   |
-      | run     | valid_code      | output in console                          |
-      | submit  | valid_code      | Submission Successful message in console   |
+    Scenario Outline: Verify user able to land on Search the array page
+    Given user will get python code from excel "<Sheet>" and <rownumber> print it in editor 
+    When click run button to see output in console on search the array page 
+    Then click submit button to see submit success or not for search the array page 
+    
+    Examples:
+    |     Sheet       | rownumber   |
+    |    Arrays PQ    |   0         |  
+    |    Arrays PQ    |   1         |
+    |    Arrays PQ    |   2         |
     
     
     Scenario: Verify that user navigate to Max Consecutive Ones page from Practice question page 
     When  The user clicks the Max Consecutive Ones page
     Then The user should be redirected to Max Consecutive Ones page contains a question,and TryEditor with Run and Submit buttons
     
-    Scenario Outline: Verify the user actions with  Pythoncode inputs
-    When The user clicks "<action>" button on  Max Consecutive Ones page
-    Then The user able to see "<expected_result>" for Max Consecutive Ones
-
-    Examples: Test Cases from Excel
+     Examples: Test Cases from Excel
       | action  | code_type       | expected_result                            |
       | run     | invalid_code    | alert box with syntax error message        |
       | submit  | invalid_code    | Error occurred during submission message   |
@@ -160,4 +156,5 @@ Background:
       | submit  | invalid_code    | Error occurred during submission message   |
       | run     | valid_code      | output in console                          |
       | submit  | valid_code      | Submission Successful message in console   |
+    
     

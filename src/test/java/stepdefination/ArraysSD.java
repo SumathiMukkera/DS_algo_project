@@ -2,7 +2,9 @@ package stepdefination;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -11,6 +13,7 @@ import org.testng.Assert;
 import com.commonfunctions.practicequestionsAndtryEditorpage;
 import com.commonfunctions.tryEditor;
 import com.hooks.Loginbase;
+import com.utilities.ExcelfileReader;
 import com.webdrivermanager.DriverFactory;
 
 import io.cucumber.java.Before;
@@ -312,7 +315,7 @@ public class ArraysSD {
     	public void the_user_is_on_the_applications_of_array_page() {
     		Arrays.clickApplicationsofArray();
     		String title=Arrays.getApplicationsofArrayTitle();
-            Assert.assertEquals(title,"ApplicationsofArray");
+            Assert.assertEquals(title,"Applications of Array");
     	}
 
     	@When("The user click TryHere buton in Applications of Array page")
@@ -370,7 +373,7 @@ public class ArraysSD {
     	public void the_user_on_applications_of_array_page() {
     		Arrays.clickApplicationsofArray();
     		String title=Arrays.getApplicationsofArrayTitle();
-            Assert.assertEquals(title,"ApplicationsofArray");
+            Assert.assertEquals(title,"Applications of Array");
     	}
 
     	@When("The user clicks Practice Questions button")
@@ -409,28 +412,103 @@ public class ArraysSD {
             Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
         
     	}
-
-    	@When("user clicks {string} button on search the array")
-    	public void user_clicks_button_on_search_the_array(String action) {
+    	@Given("user will get python code from excel {string} and {int} print it in editor")
+    	public void user_will_get_python_code_from_excel_and_print_it_in_editor(String sheetName , int rownumber) throws InvalidFormatException, IOException {
+    		Arrays.clickApplicationsofArray();
+    		Arrays.clickPracticeQuestions();
     		practicequestions.clickSearchtheArray();
-    		 if (action.equalsIgnoreCase("run")) {
-    	            practicequestions.clickRun();
-    	        } else if (action.equalsIgnoreCase("submit")) {
-    	            practicequestions.clickSubmit();
-    	        }
-    	    }
-    	
+    		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+    		ExcelfileReader reader = new ExcelfileReader();
+    		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
+    		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+    		 Arrays.getarraypracticecode(pythoncode);
+    	}
 
-    	@Then("The user able to see the {string} for Search the array")
-    	public void the_user_able_to_see_the_for_search_the_array(String expectedResult ) throws InvalidFormatException, IOException {
-    		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
-    		Assert.assertEquals(expectedResult, actualresult);
-        }
+    	@When("click run button to see output in console on search the array page")
+    	public void click_run_button_to_see_output_in_console_on_search_the_array_page() throws InvalidFormatException, IOException {
+    	    Arrays.clickRun();
+    	    String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+    		ExcelfileReader reader = new ExcelfileReader();
+    	    String sheetName = "Arrays PQ";
+			List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName );
+			for(int i = 0; i<testData.size(); i++) {
+				String expectedoutput =testData.get(i).get("output");
+				System.out.println(expectedoutput);
+				}
+			String actualoutput;
+ 	    	
+ 			if(editor.isAlertPresent()) {
+ 				
+ 			 actualoutput = editor.handleAlert();
+ 			 System.out.println(actualoutput);
+ 			} 
+ 			else {
+ 				
+ 			   actualoutput =Arrays.getOutputText();
+ 			   System.out.println(actualoutput);
+ 			}
 
-    	
+ 			List<String> expectedResultsList = editor.getexpectedResults().stream()
+ 		            .map(String::trim)  // Trim any spaces
+ 		            .filter(expected -> !expected.isEmpty())  // Remove empty strings
+ 		            .collect(Collectors.toList());
+ 			 boolean matchFound = expectedResultsList.stream()
+ 				        .anyMatch(expected -> expected.equalsIgnoreCase(actualoutput != null ? actualoutput.trim() : ""));
+ 				    Assert.assertTrue(matchFound);
+    	}
 
+    	@Then("click submit button to see submit success or not for search the array page")
+    	public void click_submit_button_to_see_submit_success_or_not_for_search_the_array_page() throws InvalidFormatException, IOException {
+    		
+    		Arrays.clickSubmit();
+    		 String Actualsubmit = Arrays.getSubmissionMessage();
+    		 String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+     		ExcelfileReader reader = new ExcelfileReader();
+     	    String sheetName = "Arrays PQ";
+ 			List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName );
+ 			List<String> expectedResultsList = new ArrayList<>();
+ 		    
+ 		    for (Map<String, String> row : testData) {
+ 		        String expectedResult = row.get("Expected message");
+ 		        if (expectedResult != null) { // Avoid null values
+ 		            expectedResultsList.add(expectedResult.trim());
+ 		        }
+ 		    }
+ 				
+ 		    List<String> expectedResultsLists = expectedResultsList.stream().map(String::trim) // Trim any spaces
+ 					.filter(expected -> !expected.isEmpty()) // Remove empty strings
+ 					.collect(Collectors.toList());
+ 			boolean matchFound = expectedResultsList.stream()
+ 					.anyMatch(expected -> expected.equalsIgnoreCase(Actualsubmit != null ? Actualsubmit.trim() : ""));
+ 			Assert.assertTrue(matchFound);
+    	   
+    	   
+    	}
+
+//
+//    	@When("user clicks {string} button on search the array")
+//    	public void user_clicks_button_on_search_the_array(String action) {
+//    		practicequestions.clickSearchtheArray();
+//    		 if (action.equalsIgnoreCase("run")) {
+//    	            practicequestions.clickRun();
+//    	        } else if (action.equalsIgnoreCase("submit")) {
+//    	            practicequestions.clickSubmit();
+//    	        }
+//    	    }
+//    	
+//
+//    	@Then("The user able to see the {string} for Search the array")
+//    	public void the_user_able_to_see_the_for_search_the_array(String expectedResult ) throws InvalidFormatException, IOException {
+//    		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
+//    		Assert.assertEquals(expectedResult, actualresult);
+//        }
+//
+//    	
+//
     	@When("The user clicks the Max Consecutive Ones page")
     	public void the_user_clicks_the_max_consecutive_ones_page() {
+    		Arrays.clickApplicationsofArray();
+    		Arrays.clickPracticeQuestions();
     	 practicequestions.clickMaxConsecutiveOnes();
     	}
 
@@ -443,77 +521,77 @@ public class ArraysSD {
             Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
         
     	}
-
-    	@When("The user clicks {string} button on  Max Consecutive Ones page")
-    	public void the_user_clicks_button_on_max_consecutive_ones_page(String action) {
-    		 if (action.equalsIgnoreCase("run")) {
- 	            practicequestions.clickRun();
- 	        } else if (action.equalsIgnoreCase("submit")) {
- 	            practicequestions.clickSubmit();
- 	        }
-    	}
-
-    	@Then("The user able to see {string} for Max Consecutive Ones")
-    	public void the_user_able_to_see_for_max_consecutive_ones(String expectedResult) throws InvalidFormatException, IOException {
-        		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
-        		Assert.assertEquals(expectedResult, actualresult);
-    	}
-
-    	@When("The user clicks the Find Numbers with even numbers of digits page")
-    	public void the_user_clicks_the_find_numbers_with_even_numbers_of_digits_page() {
-         practicequestions.clickFindNumbersWithEvenNumberOfDigits();
-    	}
-
-    	@Then("The user should be redirected to Find Numbers with even numbers of digits page contains a question,and TryEditor with Run and Submit buttons")
-    	public void the_user_should_be_redirected_to_find_numbers_with_even_numbers_of_digits_page_contains_a_question_and_try_editor_with_run_and_submit_buttons() {
-    		Assert.assertTrue(practicequestions.isTryEditorDisplayed());
-            Assert.assertTrue(practicequestions.isRunButtonDisplayed());
-            Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
-        
-    	}
-
-    	@When("The user click {string} button on Find Numbers with even numbers of digits")
-    	public void the_user_click_button_on_find_numbers_with_even_numbers_of_digits(String action) {
-    		if (action.equalsIgnoreCase("run")) {
- 	            practicequestions.clickRun();
- 	        } else if (action.equalsIgnoreCase("submit")) {
- 	            practicequestions.clickSubmit();
- 	        }
-
-    	}
-
-    	@Then("User able to see {string} for Find Numbers with even numbers of digits")
-    	public void user_able_to_see_for_find_numbers_with_even_numbers_of_digits(String expectedResult) throws InvalidFormatException, IOException {
-        		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
-        		Assert.assertEquals(expectedResult, actualresult);
-    	}
-
-    	@When("The user clicks the Squares of a Sorted Array page")
-    	public void the_user_clicks_the_squares_of_a_sorted_array_page() {
-    	    practicequestions.clickSquaresofaSortedArray();
-    	}
-
-    	@Then("The user should be redirected to Squares of a Sorted Array page contains a question,and TryEditor with Run and Submit buttons")
-    	public void the_user_should_be_redirected_to_squares_of_a_sorted_array_page_contains_a_question_and_try_editor_with_run_and_submit_buttons() {
-    		Assert.assertTrue(practicequestions.isTryEditorDisplayed());
-            Assert.assertTrue(practicequestions.isRunButtonDisplayed());
-            Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
-    	}
-
-    	@When("The user click {string} buton on Squares of a Sorted Array page")
-    	public void the_user_click_buton_on_squares_of_a_sorted_array_page(String action) {
-    		if (action.equalsIgnoreCase("run")) {
- 	            practicequestions.clickRun();
- 	        } else if (action.equalsIgnoreCase("submit")) {
- 	            practicequestions.clickSubmit();
- 	        }
-    	}
-
-    	@Then("User able to see the {string} for Squares of a Sorted Array page")
-    	public void user_able_to_see_the_for_squares_of_a_sorted_array_page(String expectedResult) throws InvalidFormatException, IOException {
-        		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
-        		Assert.assertEquals(expectedResult, actualresult);
-    	}
+//
+//    	@When("The user clicks {string} button on  Max Consecutive Ones page")
+//    	public void the_user_clicks_button_on_max_consecutive_ones_page(String action) {
+//    		 if (action.equalsIgnoreCase("run")) {
+// 	            practicequestions.clickRun();
+// 	        } else if (action.equalsIgnoreCase("submit")) {
+// 	            practicequestions.clickSubmit();
+// 	        }
+//    	}
+//
+//    	@Then("The user able to see {string} for Max Consecutive Ones")
+//    	public void the_user_able_to_see_for_max_consecutive_ones(String expectedResult) throws InvalidFormatException, IOException {
+//        		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
+//        		Assert.assertEquals(expectedResult, actualresult);
+//    	}
+//
+//    	@When("The user clicks the Find Numbers with even numbers of digits page")
+//    	public void the_user_clicks_the_find_numbers_with_even_numbers_of_digits_page() {
+//         practicequestions.clickFindNumbersWithEvenNumberOfDigits();
+//    	}
+//
+//    	@Then("The user should be redirected to Find Numbers with even numbers of digits page contains a question,and TryEditor with Run and Submit buttons")
+//    	public void the_user_should_be_redirected_to_find_numbers_with_even_numbers_of_digits_page_contains_a_question_and_try_editor_with_run_and_submit_buttons() {
+//    		Assert.assertTrue(practicequestions.isTryEditorDisplayed());
+//            Assert.assertTrue(practicequestions.isRunButtonDisplayed());
+//            Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
+//        
+//    	}
+//
+//    	@When("The user click {string} button on Find Numbers with even numbers of digits")
+//    	public void the_user_click_button_on_find_numbers_with_even_numbers_of_digits(String action) {
+//    		if (action.equalsIgnoreCase("run")) {
+// 	            practicequestions.clickRun();
+// 	        } else if (action.equalsIgnoreCase("submit")) {
+// 	            practicequestions.clickSubmit();
+// 	        }
+//
+//    	}
+//
+//    	@Then("User able to see {string} for Find Numbers with even numbers of digits")
+//    	public void user_able_to_see_for_find_numbers_with_even_numbers_of_digits(String expectedResult) throws InvalidFormatException, IOException {
+//        		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
+//        		Assert.assertEquals(expectedResult, actualresult);
+//    	}
+//
+//    	@When("The user clicks the Squares of a Sorted Array page")
+//    	public void the_user_clicks_the_squares_of_a_sorted_array_page() {
+//    	    practicequestions.clickSquaresofaSortedArray();
+//    	}
+//
+//    	@Then("The user should be redirected to Squares of a Sorted Array page contains a question,and TryEditor with Run and Submit buttons")
+//    	public void the_user_should_be_redirected_to_squares_of_a_sorted_array_page_contains_a_question_and_try_editor_with_run_and_submit_buttons() {
+//    		Assert.assertTrue(practicequestions.isTryEditorDisplayed());
+//            Assert.assertTrue(practicequestions.isRunButtonDisplayed());
+//            Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
+//    	}
+//
+//    	@When("The user click {string} buton on Squares of a Sorted Array page")
+//    	public void the_user_click_buton_on_squares_of_a_sorted_array_page(String action) {
+//    		if (action.equalsIgnoreCase("run")) {
+// 	            practicequestions.clickRun();
+// 	        } else if (action.equalsIgnoreCase("submit")) {
+// 	            practicequestions.clickSubmit();
+// 	        }
+//    	}
+//
+//    	@Then("User able to see the {string} for Squares of a Sorted Array page")
+//    	public void user_able_to_see_the_for_squares_of_a_sorted_array_page(String expectedResult) throws InvalidFormatException, IOException {
+//        		String actualresult =expectedResult.contains("alert") ? practicequestions.getexpectedmessage() : practicequestions.getexpectedoutput();
+//        		Assert.assertEquals(expectedResult, actualresult);
+//    	}
 }
 
 
