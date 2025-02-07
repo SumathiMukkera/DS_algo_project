@@ -55,7 +55,7 @@ public class HomepageSD {
 		
 		int dropdowncount = home.getDropdownItemCount();
 		  System.out.println("Expected item count: " + itemcount + ", Actual item count: " + dropdowncount);
-		Assert.assertEquals(itemcount.intValue(), dropdowncount);
+		Assert.assertEquals(dropdowncount,itemcount.intValue());
 		LoggerLoad.warn("user can see dopdown list");
 	   
 	}

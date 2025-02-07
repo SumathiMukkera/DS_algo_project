@@ -40,4 +40,5 @@ public class Stackpage {
     public void clickApplications() {
     	driver.findElement(applications).click();
     }
+    
 }

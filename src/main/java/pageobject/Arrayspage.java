@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 	public class Arrayspage {
@@ -28,7 +29,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	     //By output = By.xpath("//pre[@id='output']");
 	     By ArraysUsingList=By.xpath("//a[text()='Arrays Using List']");
 	     By BasicOperationsinLists=By.xpath("//a[text()='Basic Operations in Lists']");
-	     By ApplicationsofArray=By.xpath("//a[text()='Basic Operations in Lists']");
+	     By ApplicationsofArray=By.xpath("//a[text()='Applications of Array']");
 	     By PracticeQuestions=By.xpath("//a[text()='Practice Questions']");
 	     By Searchthearray=By.xpath("//a[text()='Search the array']");
 	     By Tryeditor=By.xpath("//span[@class='cm-variable']");
@@ -38,7 +39,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	     By MaxConsecutiveOnes=By.xpath("//a[text()='Max Consecutive Ones']");
          By FindNumberswithEvenNumberofDigits=By.xpath("//a[text()='Find Numbers with Even Number of Digits']");
 	     By SquaresofaSortedArray = By.xpath("//a[text()='Squares of a Sorted Array']");
+	     By tryeditor =By.className("CodeMirror");
 	     //By submitbutton=By.xpath("//input[@type='submit' and @value='Submit']");
+
+
+	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	     		
 
@@ -98,7 +103,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	     }*/
 	     
 	    
-	    
+	    public void getarraypracticecode(String pythoncode) {
+	    	 WebElement edit = driver.findElement(tryeditor);
+	    	 Actions actions = new Actions(driver);
+	           String text = edit.getText();
+	           ((WebElement) actions.moveToElement(edit)).clear(); // Clear any existing text
+	            actions.moveToElement(edit).click().sendKeys(pythoncode).perform(); // Enter the new Python code
+	        	    	
+	    }
 
 	    public void clickArraysUsingList() {
 	        driver.findElement(ArraysUsingList).click();
