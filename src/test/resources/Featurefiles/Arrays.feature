@@ -117,14 +117,7 @@ Background:
     |     Sheet       | rownumber   |
     |    Arrays PQ    |   0         |  
     |    Arrays PQ    |   1         |
-    |    Arrays PQ    |   2         |
-
-    
-    Examples:
-    |     Sheet       | rownumber   |
-    |    Arrays PQ    |   0         |  
-    |    Arrays PQ    |   1         |
-    |    Arrays PQ    |   2         |
+    |    Arrays PQ    |   2          |
       
     
     Scenario: Verify that user navigate to Max Consecutive Ones page from Practice question page 
@@ -136,13 +129,6 @@ Background:
     Given user get python code from excel "<Sheet>" and <rownumber> print it in editor 
     When click run button to see output in console on Max Consecutive Ones page
     Then click submit button to see submit success or not for Max Consecutive Ones 
-
-     Examples: Test Cases from Excel
-      | action  | code_type       | expected_result                            |
-      | run     | invalid_code    | alert box with syntax error message        |
-      | submit  | invalid_code    | Error occurred during submission message   |
-      | run     | valid_code      | output in console                          |
-      | submit  | valid_code      | Submission Successful message in console   |
 
     
     Examples:
