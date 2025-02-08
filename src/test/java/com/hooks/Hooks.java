@@ -6,6 +6,8 @@ import java.util.Properties;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
+import com.utilities.LoggerLoad;
 import com.utilities.configFileReader;
 import com.webdrivermanager.DriverFactory;
 
@@ -20,7 +22,7 @@ public class Hooks {
 	private WebDriver driver;
 	private configFileReader configReader=new configFileReader();
 	Properties prop;
-	
+    
 	@Before(order =0)
 	public void getProperty() {
 		configReader=new configFileReader();
@@ -28,12 +30,13 @@ public class Hooks {
 	}
 	
 	@Before(order =1)
-	public void beforeScenario() {
+	public void beforeScenario(Scenario scenario) {
 		String browsername=prop.getProperty("browser");
 		String urlname=prop.getProperty("url");
 		driverFactory = new DriverFactory();
 		driver= driverFactory.init_driver(browsername);
 		DriverFactory.getDriver().get(urlname);
+		 LoggerLoad.info("===== Starting Scenario: " + scenario.getName() + " =====");
 		
 	}
 
@@ -47,14 +50,19 @@ public class Hooks {
 	public void tearDown(Scenario scenario){
 		if(scenario.isFailed()) {
 //			take screenshot:
-			//String screenshotName = scenario.getName().replaceAll("", "_");
+			String screenshotName = scenario.getName().replaceAll("", "_");
 			byte [] sourcePath=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			//scenario.attach(sourcePath, "image/png", screenshotName);
+			scenario.attach(sourcePath, "image/png", screenshotName);
 			Allure.addAttachment("failedScreenshot", new ByteArrayInputStream(sourcePath));
+			LoggerLoad.error(" Scenario Failed: " + scenario.getName());
+			
 	}
 	
 	}
 }
+
+
+
 
 	
 	

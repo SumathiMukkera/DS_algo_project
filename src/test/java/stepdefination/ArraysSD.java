@@ -2,7 +2,9 @@ package stepdefination;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -11,6 +13,7 @@ import org.testng.Assert;
 import com.commonfunctions.practicequestionsAndtryEditorpage;
 import com.commonfunctions.tryEditor;
 import com.hooks.Loginbase;
+import com.utilities.ExcelfileReader;
 import com.webdrivermanager.DriverFactory;
 
 import io.cucumber.java.Before;
@@ -312,7 +315,7 @@ public class ArraysSD {
     	public void the_user_is_on_the_applications_of_array_page() {
     		Arrays.clickApplicationsofArray();
     		String title=Arrays.getApplicationsofArrayTitle();
-            Assert.assertEquals(title,"ApplicationsofArray");
+            Assert.assertEquals(title,"Applications of Array");
     	}
 
     	@When("The user click TryHere buton in Applications of Array page")
@@ -370,7 +373,7 @@ public class ArraysSD {
     	public void the_user_on_applications_of_array_page() {
     		Arrays.clickApplicationsofArray();
     		String title=Arrays.getApplicationsofArrayTitle();
-            Assert.assertEquals(title,"ApplicationsofArray");
+            Assert.assertEquals(title,"Applications of Array");
     	}
 
     	@When("The user clicks Practice Questions button")
@@ -409,6 +412,7 @@ public class ArraysSD {
             Assert.assertTrue(practicequestions.isSubmitButtonDisplayed());
         
     	}
+
 @Given("user will get python code from excel {string} and {int} print it in editor")
     	public void user_will_get_python_code_from_excel_and_print_it_in_editor(String sheetName, Integer rownumber) throws InvalidFormatException, IOException {
         		Arrays.clickApplicationsofArray();
@@ -419,10 +423,23 @@ public class ArraysSD {
         		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
         		 String pythoncode = testData.get(rownumber).get("Pythonecode");
         		 Arrays.getarraypracticecode(pythoncode);
+
+    	@Given("user will get python code from excel {string} and {int} print it in editor")
+    	public void user_will_get_python_code_from_excel_and_print_it_in_editor(String sheetName , int rownumber) throws InvalidFormatException, IOException {
+    		Arrays.clickApplicationsofArray();
+    		Arrays.clickPracticeQuestions();
+    		practicequestions.clickSearchtheArray();
+    		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+    		ExcelfileReader reader = new ExcelfileReader();
+    		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
+    		 String pythoncode = testData.get(rownumber).get("Pythoncode");
+    		 Arrays.getarraypracticecode(pythoncode);
+
     	}
 
     	@When("click run button to see output in console on search the array page")
     	public void click_run_button_to_see_output_in_console_on_search_the_array_page() throws InvalidFormatException, IOException {
+
     	    	    Arrays.clickRun();
     	    	    String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
     	    		ExcelfileReader reader = new ExcelfileReader();
@@ -482,6 +499,67 @@ public class ArraysSD {
      			Assert.assertTrue(matchFound);
         	   
     	}
+
+    	    Arrays.clickRun();
+    	    String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+    		ExcelfileReader reader = new ExcelfileReader();
+    	    String sheetName = "Arrays PQ";
+			List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName );
+			for(int i = 0; i<testData.size(); i++) {
+				String expectedoutput =testData.get(i).get("output");
+				System.out.println(expectedoutput);
+				}
+			String actualoutput;
+ 	    	
+ 			if(editor.isAlertPresent()) {
+ 				
+ 			 actualoutput = editor.handleAlert();
+ 			 System.out.println(actualoutput);
+ 			} 
+ 			else {
+ 				
+ 			   actualoutput =Arrays.getOutputText();
+ 			   System.out.println(actualoutput);
+ 			}
+
+ 			List<String> expectedResultsList = editor.getexpectedResults().stream()
+ 		            .map(String::trim)  // Trim any spaces
+ 		            .filter(expected -> !expected.isEmpty())  // Remove empty strings
+ 		            .collect(Collectors.toList());
+ 			 boolean matchFound = expectedResultsList.stream()
+ 				        .anyMatch(expected -> expected.equalsIgnoreCase(actualoutput != null ? actualoutput.trim() : ""));
+ 				    Assert.assertTrue(matchFound);
+    	}
+
+    	@Then("click submit button to see submit success or not for search the array page")
+    	public void click_submit_button_to_see_submit_success_or_not_for_search_the_array_page() throws InvalidFormatException, IOException {
+    		
+    		Arrays.clickSubmit();
+    		 String Actualsubmit = Arrays.getSubmissionMessage();
+    		 String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
+     		ExcelfileReader reader = new ExcelfileReader();
+     	    String sheetName = "Arrays PQ";
+ 			List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName );
+ 			List<String> expectedResultsList = new ArrayList<>();
+ 		    
+ 		    for (Map<String, String> row : testData) {
+ 		        String expectedResult = row.get("Expected message");
+ 		        if (expectedResult != null) { // Avoid null values
+ 		            expectedResultsList.add(expectedResult.trim());
+ 		        }
+ 		    }
+ 				
+ 		    List<String> expectedResultsLists = expectedResultsList.stream().map(String::trim) // Trim any spaces
+ 					.filter(expected -> !expected.isEmpty()) // Remove empty strings
+ 					.collect(Collectors.toList());
+ 			boolean matchFound = expectedResultsList.stream()
+ 					.anyMatch(expected -> expected.equalsIgnoreCase(Actualsubmit != null ? Actualsubmit.trim() : ""));
+ 			Assert.assertTrue(matchFound);
+    	   
+    	   
+    	}
+
+
 
     	@When("The user clicks the Max Consecutive Ones page")
     	public void the_user_clicks_the_max_consecutive_ones_page() {

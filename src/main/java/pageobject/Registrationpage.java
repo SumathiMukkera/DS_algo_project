@@ -14,7 +14,6 @@ public class Registrationpage {
 	By Register_registration = By.xpath("//input[@value='Register']");
 	By Login_registration = By.xpath("//a[@href='/login']");
 	private By errormsg_register = By.xpath("//div[contains(@class, 'alert') and @role='alert']");
-	private By successmsg = By.xpath(" //div[contains(text(), 'New Account Created.')]");
 	private By userId = By.xpath(" //*[@id=\"navbarCollapse\"]/div[2]/ul/a[2]");
 
 	public Registrationpage(WebDriver Driver) {
@@ -101,7 +100,6 @@ public class Registrationpage {
 		driver.findElement(Username_field).sendKeys(username);
 		
 	}
-	@SuppressWarnings("deprecation")
 	public void validregister() {
 		
 		String username = "numpy" + System.currentTimeMillis();

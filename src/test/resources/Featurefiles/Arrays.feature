@@ -102,10 +102,23 @@ Background:
     When  The user clicks the Search the array link
     Then The user should be redirected to Questions page contains a question,and TryEditor with Run and Submit buttons
     
+
      Scenario Outline: Verify user able to land on Search the array page
     Given user will get python code from excel "<Sheet>" and <rownumber> print it in editor 
     When click run button to see output in console on search the array page 
     Then click submit button to see submit success or not for search the array page 
+
+    Scenario Outline: Verify user able to land on Search the array page
+    Given user will get python code from excel "<Sheet>" and <rownumber> print it in editor 
+    When click run button to see output in console on search the array page 
+    Then click submit button to see submit success or not for search the array page 
+    
+    Examples:
+    |     Sheet       | rownumber   |
+    |    Arrays PQ    |   0         |  
+    |    Arrays PQ    |   1         |
+    |    Arrays PQ    |   2         |
+
     
     Examples:
     |     Sheet       | rownumber   |
@@ -118,10 +131,19 @@ Background:
     When  The user clicks the Max Consecutive Ones page
     Then The user should be redirected to Max Consecutive Ones page contains a question,and TryEditor with Run and Submit buttons
     
+
    Scenario Outline: Verify user able to land on Max Consecutive Ones page
     Given user get python code from excel "<Sheet>" and <rownumber> print it in editor 
     When click run button to see output in console on Max Consecutive Ones page
     Then click submit button to see submit success or not for Max Consecutive Ones 
+
+     Examples: Test Cases from Excel
+      | action  | code_type       | expected_result                            |
+      | run     | invalid_code    | alert box with syntax error message        |
+      | submit  | invalid_code    | Error occurred during submission message   |
+      | run     | valid_code      | output in console                          |
+      | submit  | valid_code      | Submission Successful message in console   |
+
     
     Examples:
     |     Sheet       | rownumber   |
@@ -161,4 +183,5 @@ Background:
     |    Arrays PQ    |   1         |
     |    Arrays PQ    |   2         |
      
+    
     

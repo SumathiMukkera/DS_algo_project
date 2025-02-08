@@ -6,12 +6,15 @@ package pageobject;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 	public class Arrayspage {
@@ -28,7 +31,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	     //By output = By.xpath("//pre[@id='output']");
 	     By ArraysUsingList=By.xpath("//a[text()='Arrays Using List']");
 	     By BasicOperationsinLists=By.xpath("//a[text()='Basic Operations in Lists']");
-	     By ApplicationsofArray=By.xpath("//a[text()='Basic Operations in Lists']");
+	     By ApplicationsofArray=By.xpath("//a[text()='Applications of Array']");
 	     By PracticeQuestions=By.xpath("//a[text()='Practice Questions']");
 	     By Searchthearray=By.xpath("//a[text()='Search the array']");
 	     By Tryeditor=By.xpath("//span[@class='cm-variable']");
@@ -38,7 +41,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	     By MaxConsecutiveOnes=By.xpath("//a[text()='Max Consecutive Ones']");
          By FindNumberswithEvenNumberofDigits=By.xpath("//a[text()='Find Numbers with Even Number of Digits']");
 	     By SquaresofaSortedArray = By.xpath("//a[text()='Squares of a Sorted Array']");
+	    
 	     //By submitbutton=By.xpath("//input[@type='submit' and @value='Submit']");
+
+
+	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	     		
 
@@ -96,9 +103,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	         }
 
 	     }*/
+	     private void makeElementVisible(WebElement element) {
+	         JavascriptExecutor js = (JavascriptExecutor) driver;
+	         js.executeScript("arguments[0].style.display='block';", element);  // Make element visible
+	     }
 	     
 	    
-	    
+	    public void getarraypracticecode(String pythoncode) {
+	    	 WebElement edit = driver.findElement(By.xpath("//div[@class='input']//textarea[@id='editor']"));
+	    	 makeElementVisible(edit);
+
+	         // Wait until the textarea is interactable
+	         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	         wait.until(ExpectedConditions.elementToBeClickable(edit));
+
+	         // Clear any existing text
+	         edit.clear();
+
+	         // Use Actions to send the Python code
+	         Actions actions = new Actions(driver);
+	         actions.moveToElement(edit).click().sendKeys(pythoncode).perform(); 
+	    }
 
 	    public void clickArraysUsingList() {
 	        driver.findElement(ArraysUsingList).click();
