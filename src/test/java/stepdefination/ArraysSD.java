@@ -413,16 +413,6 @@ public class ArraysSD {
         
     	}
 
-@Given("user will get python code from excel {string} and {int} print it in editor")
-    	public void user_will_get_python_code_from_excel_and_print_it_in_editor(String sheetName, Integer rownumber) throws InvalidFormatException, IOException {
-        		Arrays.clickApplicationsofArray();
-        		Arrays.clickPracticeQuestions();
-        		practicequestions.clickSearchtheArray();
-        		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
-        		ExcelfileReader reader = new ExcelfileReader();
-        		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-        		 String pythoncode = testData.get(rownumber).get("Pythonecode");
-        		 Arrays.getarraypracticecode(pythoncode);
 
     	@Given("user will get python code from excel {string} and {int} print it in editor")
     	public void user_will_get_python_code_from_excel_and_print_it_in_editor(String sheetName , int rownumber) throws InvalidFormatException, IOException {
@@ -584,7 +574,7 @@ public class ArraysSD {
         		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
         		ExcelfileReader reader = new ExcelfileReader();
         		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-        		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+        		 String pythoncode = testData.get(rownumber).get("Pythoncode");
         		 Arrays.getarraypracticecode(pythoncode);
     	}
 
@@ -676,7 +666,7 @@ public class ArraysSD {
         		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
         		ExcelfileReader reader = new ExcelfileReader();
         		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-        		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+        		 String pythoncode = testData.get(rownumber).get("Pythoncode");
         		 Arrays.getarraypracticecode(pythoncode);
     	}
 
@@ -771,7 +761,7 @@ public class ArraysSD {
          		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
          		ExcelfileReader reader = new ExcelfileReader();
          		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-         		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+         		 String pythoncode = testData.get(rownumber).get("Pythoncode");
          		 Arrays.getarraypracticecode(pythoncode);
      	
     	}
