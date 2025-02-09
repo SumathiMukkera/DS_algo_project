@@ -44,8 +44,15 @@ public class Hooks {
 	@After(order =0)
 	public void quitBrowser() {
 		 if (driver != null) {
+
+		        driver.quit(); // Quit the browser only if it's initialized
+		    } else {
+		        LoggerLoad.error("WebDriver instance is null, cannot quit browser.");
+		    }
+
         driver.quit();
     }
+
 	}
 	
 	@After(order=1)
@@ -60,6 +67,12 @@ public class Hooks {
 			
 	}
 		
+
+		 if (driver != null) {
+		        driver.quit();
+		    }
+	
+
 	}
 }
 
