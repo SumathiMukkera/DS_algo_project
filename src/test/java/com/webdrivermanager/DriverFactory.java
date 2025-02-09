@@ -20,11 +20,11 @@ public class DriverFactory {
 	public WebDriver init_driver(String browser) {
 		
 		ChromeOptions options = new ChromeOptions();
-	  options.addArguments("--remote-debugging-port=9222");
           options.addArguments("--headless"); // If running headless
-          options.addArguments("--disable-dev-shm-usage");
-          options.addArguments("--no-sandbox");
-        options.addArguments("--disable-gpu");
+         options.addArguments("--disable-software-rasterizer");
+        options.addArguments("--no-sandbox");
+         options.addArguments("--disable-gpu");
+	options.addArguments("--disable-extensions");
 		System.out.println("browser value is :" + browser);
 		if(browser.equals("chrome")) {
 			 WebDriverManager.chromedriver().setup();
