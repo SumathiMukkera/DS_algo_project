@@ -59,10 +59,8 @@ public class Hooks {
 			LoggerLoad.error(" Scenario Failed: " + scenario.getName());
 			
 	}
-		 if (driver != null) {
-        driver.quit();
-    }
-	
+		
+	driver.quit();
 	}
 }
 
