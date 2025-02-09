@@ -1,15 +1,12 @@
 package com.webdrivermanager;
 
-import java.io.IOException;
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
-import com.utilities.*;
+import org.testng.annotations.Optional;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -19,11 +16,16 @@ public class DriverFactory {
 	/*This method is used to initialize the thread local driver on the basis of given browser
 	 * this will reurn tldriver
 	 */
+	    
 	public WebDriver init_driver(String browser) {
+		
+		ChromeOptions options = new ChromeOptions();
+	    options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu");
+	    
 		System.out.println("browser value is :" + browser);
 		if(browser.equals("chrome")) {
 			 WebDriverManager.chromedriver().setup();
-			 tlDriver.set(new ChromeDriver());
+			 tlDriver.set(new ChromeDriver(options));
 		}
 		
 		else if(browser.equals("firefox")) {
