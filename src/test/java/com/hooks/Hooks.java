@@ -49,11 +49,9 @@ public class Hooks {
 		    } else {
 		        LoggerLoad.error("WebDriver instance is null, cannot quit browser.");
 		    }
-
-        driver.quit();
     }
 
-	}
+	
 	
 	@After(order=1)
 	public void tearDown(Scenario scenario){
@@ -68,10 +66,7 @@ public class Hooks {
 	}
 		
 
-		 if (driver != null) {
-		        driver.quit();
-		    }
-	
+		driver.quit();
 
 	}
 }
