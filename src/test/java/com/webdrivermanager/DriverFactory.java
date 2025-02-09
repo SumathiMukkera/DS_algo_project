@@ -21,7 +21,7 @@ public class DriverFactory {
 		
 		ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu");
-	    
+	    options.addArguments("--verbose");
 		System.out.println("browser value is :" + browser);
 		if(browser.equals("chrome")) {
 			 WebDriverManager.chromedriver().setup();
