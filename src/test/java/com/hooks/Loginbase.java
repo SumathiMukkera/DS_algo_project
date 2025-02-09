@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import com.DriverFactory.DriverFactory;
+import com.webdrivermanager.DriverFactory;
 
 import Base.Loginexecution;
 

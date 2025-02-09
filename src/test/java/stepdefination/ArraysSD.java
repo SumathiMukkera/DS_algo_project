@@ -422,7 +422,7 @@ public class ArraysSD {
         		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
         		ExcelfileReader reader = new ExcelfileReader();
         		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-        		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+        		 String pythoncode = testData.get(rownumber).get("Pythoncode");
         		 Arrays.getarraypracticecode(pythoncode);
     	}
 
@@ -511,7 +511,7 @@ public class ArraysSD {
         		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
         		ExcelfileReader reader = new ExcelfileReader();
         		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-        		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+        		 String pythoncode = testData.get(rownumber).get("Pythoncode");
         		 Arrays.getarraypracticecode(pythoncode);
     	}
 
@@ -603,7 +603,7 @@ public class ArraysSD {
         		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
         		ExcelfileReader reader = new ExcelfileReader();
         		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-        		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+        		 String pythoncode = testData.get(rownumber).get("Pythoncode");
         		 Arrays.getarraypracticecode(pythoncode);
     	}
 
@@ -698,7 +698,7 @@ public class ArraysSD {
          		String excelFilePath="src/test/resources/ExcelTestData/ExcelData.xlsx";
          		ExcelfileReader reader = new ExcelfileReader();
          		 List<Map<String, String>> testData =reader.getData(excelFilePath,sheetName);
-         		 String pythoncode = testData.get(rownumber).get("Pythonecode");
+         		 String pythoncode = testData.get(rownumber).get("Pythoncode");
          		 Arrays.getarraypracticecode(pythoncode);
      	
     	}

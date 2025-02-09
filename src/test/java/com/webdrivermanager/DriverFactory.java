@@ -1,5 +1,5 @@
 package com.webdrivermanager;
-
+import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,8 +20,11 @@ public class DriverFactory {
 	public WebDriver init_driver(String browser) {
 		
 		ChromeOptions options = new ChromeOptions();
-	    options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu");
-	    
+          options.addArguments("--headless"); // If running headless
+         options.addArguments("--disable-software-rasterizer");
+        options.addArguments("--no-sandbox");
+         options.addArguments("--disable-gpu");
+	options.addArguments("--disable-extensions");
 		System.out.println("browser value is :" + browser);
 		if(browser.equals("chrome")) {
 			 WebDriverManager.chromedriver().setup();
@@ -49,6 +52,7 @@ public class DriverFactory {
 		
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		return getDriver();
 	}
 	
