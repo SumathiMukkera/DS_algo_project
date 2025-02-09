@@ -33,7 +33,6 @@ public class practicequestionsAndtryEditorpage {
 	ExcelfileReader reader = new ExcelfileReader();
 	 private By alertMessage = By.className("alert");
    
-		
 		public practicequestionsAndtryEditorpage(WebDriver driver) {
 			this.driver=driver;
 			//this.wait = new WebDriverWait(driver, 10);
