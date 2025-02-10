@@ -6,8 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Queuepage {
 
 	
-	private WebDriver driver = new ChromeDriver();
-	
+	private WebDriver driver;
 	 //locators
 	
     By QueueGetStarted =By.xpath("//a[@href='queue']");

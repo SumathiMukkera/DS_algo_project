@@ -44,7 +44,7 @@ public class Hooks {
 	  @After(order = 1)
 	  public void quitDriver() {
 		    if (driver != null) {
-		        driver.quit();
+		        DriverFactory.getDriver().quit();
 		        DriverFactory.tlDriver.remove();  // Explicitly remove thread-local driver
 		    }
 		}
