@@ -39,35 +39,30 @@ public class Hooks {
 		 LoggerLoad.info("===== Starting Scenario: " + scenario.getName() + " =====");
 		
 	}
-
-	
-	@After(order =0)
-	public void quitBrowser() {
-		 if (driver != null) {
-		        driver.quit(); // Quit the browser only if it's initialized
-		    } else {
-		        LoggerLoad.error("WebDriver instance is null, cannot quit browser.");
-		    }
-	}
-	
-	@After(order=1)
-	public void tearDown(Scenario scenario){
-		if(scenario.isFailed()) {
-//			take screenshot:
-			String screenshotName = scenario.getName().replaceAll("", "_");
-			byte [] sourcePath=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(sourcePath, "image/png", screenshotName);
-			Allure.addAttachment("failedScreenshot", new ByteArrayInputStream(sourcePath));
-			LoggerLoad.error(" Scenario Failed: " + scenario.getName());
-			
-	}
-		
-		 if (driver != null) {
+ 
+	 // Consolidate driver.quit() in one place
+	  @After(order = 0)
+	  public void quitDriver() {
+		    if (driver != null) {
 		        driver.quit();
+		        DriverFactory.tlDriver.remove();  // Explicitly remove thread-local driver
 		    }
-	
+		}
+
+	    // Capture screenshots if scenario fails
+	    @After(order = 1)
+	    public void tearDown(Scenario scenario) {
+	        if (scenario.isFailed()) {
+	            // Take screenshot on failure
+	            String screenshotName = scenario.getName().replaceAll(" ", "_");
+	            byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	            scenario.attach(sourcePath, "image/png", screenshotName);
+	            Allure.addAttachment("failedScreenshot", new ByteArrayInputStream(sourcePath));
+	            LoggerLoad.error("Scenario Failed: " + scenario.getName());
+	        }
+	    }
 	}
-}
+
 
 
 
