@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 	public class Arrayspage {
 		
-		private WebDriver driver = new ChromeDriver();
+		private WebDriver driver ;
 		
 
 		 //locators
