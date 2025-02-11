@@ -41,7 +41,7 @@ public class Hooks {
 	}
  
 	 // Consolidate driver.quit() in one place
-	  @After(order = 1)
+	  @After(order = 0)
 	  public void quitDriver() {
 		    if (driver != null) {
 		        DriverFactory.getDriver().quit();
@@ -50,7 +50,7 @@ public class Hooks {
 		}
 
 	    // Capture screenshots if scenario fails
-	    @After(order = 2)
+	    @After(order = 1)
 	    public void tearDown(Scenario scenario) {
 	        if (scenario.isFailed()) {
 	            // Take screenshot on failure

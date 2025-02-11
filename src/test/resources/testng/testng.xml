@@ -19,5 +19,5 @@
       <class name="com.testrunner.TestRunner"/>
     </classes>
   </test> <!-- Default test -->
-</suite> <!-- Default suite -->
+</suite> <!-- Default suite -->  
             

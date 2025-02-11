@@ -110,7 +110,7 @@
 <dataproviderthreadcount>5</dataproviderthreadcount>
 <parllel>methods</parllel> 
 <threadcount>5</threadcount>
-<forkCount>5</forkCount>
+<!-- <forkCount>5</forkCount>-->
 </properties>
 <systemPropertyVariables>
 <browser>chrome</browser>
