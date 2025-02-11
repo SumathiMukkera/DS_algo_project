@@ -4,8 +4,9 @@ import org.openqa.selenium.WebDriver;
 
 public class Queuepage {
 
-	
-	private WebDriver driver;
+
+	private WebDriver driver ;
+
 	 //locators
 	
     By QueueGetStarted =By.xpath("//a[@href='queue']");
