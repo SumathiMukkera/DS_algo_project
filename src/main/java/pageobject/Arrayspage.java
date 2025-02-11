@@ -7,14 +7,10 @@ package pageobject;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.WebElement;
-	import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 	public class Arrayspage {
@@ -25,10 +21,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 		 //locators
 	     By ArraysGetStarted =By.xpath("//a[@href='array']");
 	     By ArraysinPython =By.xpath("//a[text()='Arrays in Python']");
-	    // By Tryhere =By.xpath("//a[@class='btn btn-info' and text()='Try here>>>']");
-	    //By tryeditor = By.xpath("//div[@class='CodeMirror-scroll']");
-	    // By Run = By.xpath("//button[text()='Run']");
-	     //By output = By.xpath("//pre[@id='output']");
 	     By ArraysUsingList=By.xpath("//a[text()='Arrays Using List']");
 	     By BasicOperationsinLists=By.xpath("//a[text()='Basic Operations in Lists']");
 	     By ApplicationsofArray=By.xpath("//a[text()='Applications of Array']");

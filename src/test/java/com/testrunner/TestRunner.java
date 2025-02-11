@@ -20,7 +20,7 @@ import io.cucumber.testng.CucumberOptions;
     plugin = {"pretty", "html:target/cucumberreports.html",
     		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
     		  //"json:target/cucumber-report.json",
-    		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:target/extent-report.html",
+    		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
     		  "com.aventstack.chaintest.plugins.ChainTestCucumberListener:"},
 
     monochrome = true

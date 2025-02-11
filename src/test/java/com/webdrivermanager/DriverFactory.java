@@ -19,17 +19,10 @@ public class DriverFactory {
 	    
 	public WebDriver init_driver(String browser) {
 		
-		ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-	options.addArguments("--disable-gpu");
-       options.addArguments("--disable-dev-shm-usage");  
-        options.addArguments("--remote-allow-origins=*");  
-	options.addArguments("--disable-background-timer-throttling");
-       options.addArguments("--disable-backgrounding-occluded-windows");
 		System.out.println("browser value is :" + browser);
 		if(browser.equals("chrome")) {
 			 WebDriverManager.chromedriver().setup();
-			 tlDriver.set(new ChromeDriver(options));
+			 tlDriver.set(new ChromeDriver());
 		}
 		
 		else if(browser.equals("firefox")) {
