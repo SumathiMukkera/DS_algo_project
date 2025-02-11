@@ -1,13 +1,12 @@
 package pageobject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Queuepage {
 
-	
+
 	private WebDriver driver ;
-	
+
 	 //locators
 	
     By QueueGetStarted =By.xpath("//a[@href='queue']");

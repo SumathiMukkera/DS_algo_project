@@ -40,6 +40,29 @@ public class Hooks {
 		
 	}
 
+ 
+	 // Consolidate driver.quit() in one place
+	  @After(order = 0)
+	  public void quitDriver() {
+		    if (driver != null) {
+		        DriverFactory.getDriver().quit();
+		        DriverFactory.tlDriver.remove();  // Explicitly remove thread-local driver
+		    }
+		}
+
+	    // Capture screenshots if scenario fails
+	    @After(order = 1)
+	    public void tearDown(Scenario scenario) {
+	        if (scenario.isFailed()) {
+	            // Take screenshot on failure
+	            String screenshotName = scenario.getName().replaceAll(" ", "_");
+	            byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	            scenario.attach(sourcePath, "image/png", screenshotName);
+	            Allure.addAttachment("failedScreenshot", new ByteArrayInputStream(sourcePath));
+	            LoggerLoad.error("Scenario Failed: " + scenario.getName());
+	        }
+	    }
+
 	
 	@After(order =0)
 	public void quitBrowser() {
@@ -68,8 +91,9 @@ public class Hooks {
 
 		driver.quit();
 
+
 	}
-}
+
 
 
 

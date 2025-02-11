@@ -108,8 +108,9 @@
 </suiteXmlFiles>
 <properties>
 <dataproviderthreadcount>5</dataproviderthreadcount>
-<parrllell>tests</parrllell>
-<threadcount>7</threadcount>
+<parllel>methods</parllel> 
+<threadcount>5</threadcount>
+<!-- <forkCount>5</forkCount>-->
 </properties>
 <systemPropertyVariables>
 <browser>chrome</browser>
