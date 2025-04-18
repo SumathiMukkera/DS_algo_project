@@ -12,3 +12,477 @@ Test log entry - Log file is writable.
 Test log entry - Log file is writable.
 Test log entry - Log file is writable.
 Test log entry - Log file is writable.
+[INFO ]2025-02-1113:08:59.220[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Arrays in Python  page =====
+   [INFO ]2025-02-1113:09:06.336[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to TryEditor page for Arrays in Python page =====
+   [INFO ]2025-02-1113:09:11.929[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate through Arrays in Python and execute Python code =====
+   [ERROR]2025-02-1113:09:26.812[main]com.utilities.LoggerLoad1)-Scenario Failed: Navigate through Arrays in Python and execute Python code
+   [INFO ]2025-02-1113:09:29.198[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate through Arrays in Python and execute Python code =====
+   [INFO ]2025-02-1113:09:35.345[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate through Arrays in Python and execute Python code =====
+   [INFO ]2025-02-1113:09:52.056[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Array Using List  page =====
+   [INFO ]2025-02-1113:09:56.310[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to TryEditor page for Arrays Using List page =====
+   [INFO ]2025-02-1113:10:02.877[main]com.utilities.LoggerLoad1)-===== Starting Scenario: user navigate through Arrays Using List page and excute python code =====
+   [ERROR]2025-02-1113:10:18.115[main]com.utilities.LoggerLoad1)-Scenario Failed: user navigate through Arrays Using List page and excute python code
+   [INFO ]2025-02-1113:10:20.667[main]com.utilities.LoggerLoad1)-===== Starting Scenario: user navigate through Arrays Using List page and excute python code =====
+   [INFO ]2025-02-1113:10:27.407[main]com.utilities.LoggerLoad1)-===== Starting Scenario: user navigate through Arrays Using List page and excute python code =====
+   [INFO ]2025-02-1113:10:45.100[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Basic Operations in Lists page =====
+   [INFO ]2025-02-1113:10:49.612[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to TryEditor page for Basic OPerations in Lists page =====
+   [INFO ]2025-02-1113:10:55.301[main]com.utilities.LoggerLoad1)-===== Starting Scenario: user navigate through Basic Operations in Lists page and excute python code =====
+   [ERROR]2025-02-1113:11:09.796[main]com.utilities.LoggerLoad1)-Scenario Failed: user navigate through Basic Operations in Lists page and excute python code
+   [INFO ]2025-02-1113:11:12.147[main]com.utilities.LoggerLoad1)-===== Starting Scenario: user navigate through Basic Operations in Lists page and excute python code =====
+   [INFO ]2025-02-1113:11:20.608[main]com.utilities.LoggerLoad1)-===== Starting Scenario: user navigate through Basic Operations in Lists page and excute python code =====
+   [INFO ]2025-02-1113:11:37.727[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Applications of Array page =====
+   [INFO ]2025-02-1113:11:42.886[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to TryEditor page for Applications of Array page =====
+   [INFO ]2025-02-1113:11:47.976[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify that user able to run with nocode and valid and invalid python code =====
+   [ERROR]2025-02-1113:12:02.570[main]com.utilities.LoggerLoad1)-Scenario Failed: verify that user able to run with nocode and valid and invalid python code
+   [INFO ]2025-02-1113:12:05.273[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify that user able to run with nocode and valid and invalid python code =====
+   [INFO ]2025-02-1113:12:11.624[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify that user able to run with nocode and valid and invalid python code =====
+   [INFO ]2025-02-1113:12:28.468[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Practice Questions Page =====
+   [INFO ]2025-02-1113:12:32.919[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Search the array Page from Practice questions page =====
+   [INFO ]2025-02-1113:12:38.033[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Search the array page =====
+   [INFO ]2025-02-1113:12:41.632[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Search the array page =====
+   [ERROR]2025-02-1113:12:45.626[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Search the array page
+   [INFO ]2025-02-1113:12:47.768[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Search the array page =====
+   [ERROR]2025-02-1113:12:52.812[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Search the array page
+   [INFO ]2025-02-1113:12:54.789[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Search the array page =====
+   [ERROR]2025-02-1113:13:01.150[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Search the array page
+   [INFO ]2025-02-1113:13:03.186[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Max Consecutive Ones page from Practice question page =====
+   [INFO ]2025-02-1113:13:08.625[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Max Consecutive Ones page =====
+   [ERROR]2025-02-1113:13:12.696[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Max Consecutive Ones page
+   [INFO ]2025-02-1113:13:14.318[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Max Consecutive Ones page =====
+   [ERROR]2025-02-1113:13:18.362[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Max Consecutive Ones page
+   [INFO ]2025-02-1113:13:20.238[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Max Consecutive Ones page =====
+   [ERROR]2025-02-1113:13:27.845[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Max Consecutive Ones page
+   [INFO ]2025-02-1113:13:29.768[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Find Numbers with even numbers of digits page from Practice questions page =====
+   [INFO ]2025-02-1113:13:35.289[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Find Numbers with even numbers of digits =====
+   [ERROR]2025-02-1113:13:39.409[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Find Numbers with even numbers of digits
+   [INFO ]2025-02-1113:13:41.104[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Find Numbers with even numbers of digits =====
+   [ERROR]2025-02-1113:13:45.573[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Find Numbers with even numbers of digits
+   [INFO ]2025-02-1113:13:47.484[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Find Numbers with even numbers of digits =====
+   [ERROR]2025-02-1113:13:55.632[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Find Numbers with even numbers of digits
+   [INFO ]2025-02-1113:13:57.762[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Squares of a Sorted Array page from Practice questions page =====
+   [ERROR]2025-02-1113:14:30.690[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that user navigate to Squares of a Sorted Array page from Practice questions page
+   [INFO ]2025-02-1113:14:32.862[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Squares of a Sorted Array =====
+   [ERROR]2025-02-1113:14:36.953[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Squares of a Sorted Array
+   [INFO ]2025-02-1113:14:38.679[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Squares of a Sorted Array =====
+   [ERROR]2025-02-1113:14:42.662[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Squares of a Sorted Array
+   [INFO ]2025-02-1113:14:44.407[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user able to land on Squares of a Sorted Array =====
+   [ERROR]2025-02-1113:14:50.694[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify user able to land on Squares of a Sorted Array
+   [INFO ]2025-02-1113:14:52.813[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Time Complexity page =====
+   [INFO ]2025-02-1113:14:54.722[main]com.utilities.LoggerLoad1)-user login into ds algo portal
+   [INFO ]2025-02-1113:14:54.773[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:14:55.284[main]com.utilities.LoggerLoad1)-user navigate to data structure intoduction module
+   [INFO ]2025-02-1113:14:55.306[main]com.utilities.LoggerLoad1)-user is on data structure intoduction page 
+   [INFO ]2025-02-1113:14:55.643[main]com.utilities.LoggerLoad1)-user cilcks time complexity link
+   [INFO ]2025-02-1113:14:55.964[main]com.utilities.LoggerLoad1)-user re directed to time complexity
+   [INFO ]2025-02-1113:14:57.523[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to try Editor page =====
+   [INFO ]2025-02-1113:14:58.965[main]com.utilities.LoggerLoad1)-user login into ds algo portal
+   [INFO ]2025-02-1113:14:58.998[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:14:59.322[main]com.utilities.LoggerLoad1)-user navigate to data structure intoduction module
+   [INFO ]2025-02-1113:14:59.395[main]com.utilities.LoggerLoad1)-user is on data structure intoduction page 
+   [INFO ]2025-02-1113:14:59.774[main]com.utilities.LoggerLoad1)-user is in time complexity page
+   [INFO ]2025-02-1113:15:00.877[main]com.utilities.LoggerLoad1)-
+   [INFO ]2025-02-1113:15:00.896[main]com.utilities.LoggerLoad1)-user is on assessment page
+   [INFO ]2025-02-1113:15:02.510[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate through data structures and execute Python code for datastructures =====
+   [INFO ]2025-02-1113:15:03.849[main]com.utilities.LoggerLoad1)-user login into ds algo portal
+   [INFO ]2025-02-1113:15:03.948[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:15:04.297[main]com.utilities.LoggerLoad1)-user navigate to data structure intoduction module
+   [INFO ]2025-02-1113:15:04.339[main]com.utilities.LoggerLoad1)-user is on data structure intoduction page 
+   [INFO ]2025-02-1113:15:05.911[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate through data structures and execute Python code for datastructures =====
+   [INFO ]2025-02-1113:15:07.357[main]com.utilities.LoggerLoad1)-user login into ds algo portal
+   [INFO ]2025-02-1113:15:07.378[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:15:07.705[main]com.utilities.LoggerLoad1)-user navigate to data structure intoduction module
+   [INFO ]2025-02-1113:15:07.732[main]com.utilities.LoggerLoad1)-user is on data structure intoduction page 
+   [INFO ]2025-02-1113:15:10.008[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate through data structures and execute Python code for datastructures =====
+   [INFO ]2025-02-1113:15:11.521[main]com.utilities.LoggerLoad1)-user login into ds algo portal
+   [INFO ]2025-02-1113:15:11.690[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:15:12.100[main]com.utilities.LoggerLoad1)-user navigate to data structure intoduction module
+   [INFO ]2025-02-1113:15:12.113[main]com.utilities.LoggerLoad1)-user is on data structure intoduction page 
+   [INFO ]2025-02-1113:15:13.735[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Practice Questions page =====
+   [INFO ]2025-02-1113:15:15.247[main]com.utilities.LoggerLoad1)-user login into ds algo portal
+   [INFO ]2025-02-1113:15:15.290[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:15:15.604[main]com.utilities.LoggerLoad1)-user navigate to data structure intoduction module
+   [INFO ]2025-02-1113:15:15.637[main]com.utilities.LoggerLoad1)-user is on data structure intoduction page 
+   [INFO ]2025-02-1113:15:15.965[main]com.utilities.LoggerLoad1)-user is in time complexity page
+   [INFO ]2025-02-1113:15:16.569[main]com.utilities.LoggerLoad1)-user is in practice questions page
+   [INFO ]2025-02-1113:15:16.595[main]com.utilities.LoggerLoad1)-user is in practice questions page
+   [INFO ]2025-02-1113:15:18.413[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to see practice questions links in datastructurespage =====
+   [INFO ]2025-02-1113:15:19.795[main]com.utilities.LoggerLoad1)-user login into ds algo portal
+   [INFO ]2025-02-1113:15:19.868[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:15:20.166[main]com.utilities.LoggerLoad1)-user navigate to data structure intoduction module
+   [INFO ]2025-02-1113:15:20.196[main]com.utilities.LoggerLoad1)-user is on data structure intoduction page 
+   [INFO ]2025-02-1113:15:20.776[main]com.utilities.LoggerLoad1)-user is in practice questions page
+   [ERROR]2025-02-1113:15:20.906[main]com.utilities.LoggerLoad1)-Scenario Failed: verify user able to see practice questions links in datastructurespage
+   [INFO ]2025-02-1113:15:22.386[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Grap h page =====
+   [INFO ]2025-02-1113:15:26.287[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to tryEditor page from Graph page =====
+   [INFO ]2025-02-1113:15:31.122[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Graph page =====
+   [ERROR]2025-02-1113:15:45.757[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute for Graph page
+   [INFO ]2025-02-1113:15:48.520[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Graph page =====
+   [INFO ]2025-02-1113:15:54.313[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Graph page =====
+   [INFO ]2025-02-1113:16:10.656[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Graph Representation page =====
+   [INFO ]2025-02-1113:16:14.585[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to TryEditor page from Graph Representation page =====
+   [INFO ]2025-02-1113:16:19.166[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Graph Representation page =====
+   [ERROR]2025-02-1113:16:33.368[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute for Graph Representation page
+   [INFO ]2025-02-1113:16:36.000[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Graph Representation page =====
+   [INFO ]2025-02-1113:16:41.282[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Graph Representation page =====
+   [INFO ]2025-02-1113:16:56.968[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Practice Questions page of Graph =====
+   [INFO ]2025-02-1113:17:01.435[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to see practice questions links of Graph =====
+   [ERROR]2025-02-1113:17:04.447[main]com.utilities.LoggerLoad1)-Scenario Failed: verify user able to see practice questions links of Graph
+   [INFO ]2025-02-1113:17:06.070[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Signout button =====
+   [INFO ]2025-02-1113:17:09.939[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify the Home page for an user without Sign in =====
+   [WARN ]2025-02-1113:17:09.957[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:17:10.346[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:17:10.435[main]com.utilities.LoggerLoad1)-user can see register and login buttons
+   [INFO ]2025-02-1113:17:12.137[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to view options for "Data Structures" dropdown on home page without Sign in =====
+   [INFO ]2025-02-1113:17:12.577[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:17:12.670[main]com.utilities.LoggerLoad1)-user can see data structure dropdown
+   [ERROR]2025-02-1113:17:43.056[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that user is able to view options for "Data Structures" dropdown on home page without Sign in
+   [INFO ]2025-02-1113:17:44.709[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user is on home page and click on dropdown "Arrays"without sign in =====
+   [INFO ]2025-02-1113:17:45.161[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [INFO ]2025-02-1113:17:45.590[main]com.utilities.LoggerLoad1)-user can click dropsown option
+   [WARN ]2025-02-1113:17:45.628[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:17:47.114[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user is on home page and click on dropdown "Linked List"without sign in =====
+   [INFO ]2025-02-1113:17:47.584[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [INFO ]2025-02-1113:17:48.075[main]com.utilities.LoggerLoad1)-user can click dropsown option
+   [WARN ]2025-02-1113:17:48.108[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:17:49.591[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user is on home page and click on dropdown "Stack"without sign in =====
+   [INFO ]2025-02-1113:17:50.103[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [INFO ]2025-02-1113:17:50.587[main]com.utilities.LoggerLoad1)-user can click dropsown option
+   [WARN ]2025-02-1113:17:50.617[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:17:52.087[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user is on home page and click on dropdown "Queue"without sign in =====
+   [INFO ]2025-02-1113:17:52.537[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [INFO ]2025-02-1113:17:53.069[main]com.utilities.LoggerLoad1)-user can click dropsown option
+   [WARN ]2025-02-1113:17:53.120[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:17:54.666[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user is on home page and click on dropdown "Tree"without sign in =====
+   [INFO ]2025-02-1113:17:55.142[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [INFO ]2025-02-1113:17:55.671[main]com.utilities.LoggerLoad1)-user can click dropsown option
+   [WARN ]2025-02-1113:17:55.710[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:17:57.196[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify user is on home page and click on dropdown "Graph"without sign in =====
+   [INFO ]2025-02-1113:17:57.650[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [INFO ]2025-02-1113:17:58.150[main]com.utilities.LoggerLoad1)-user can click dropsown option
+   [WARN ]2025-02-1113:17:58.183[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:17:59.626[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user able to see warning message on clicking Get Started buttons of Data Structures-Introduction on the home page without Sign in =====
+   [INFO ]2025-02-1113:18:00.066[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:18:00.387[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [WARN ]2025-02-1113:18:00.435[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:18:01.965[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user able to see warning message on clicking Get Started buttons of Array on the home page without Sign in =====
+   [INFO ]2025-02-1113:18:02.426[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:18:02.760[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [WARN ]2025-02-1113:18:02.795[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:18:04.460[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user able to see warning message on clicking Get Started buttons of Linked List on the home page without Sign in =====
+   [INFO ]2025-02-1113:18:04.960[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:18:05.280[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [WARN ]2025-02-1113:18:05.325[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:18:07.238[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user able to see warning message on clicking Get Started buttons of Stack on the home page without Sign in =====
+   [INFO ]2025-02-1113:18:07.784[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:18:08.117[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [WARN ]2025-02-1113:18:08.171[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:18:09.636[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user able to see warning message on clicking Get Started buttons of Queue on the home page without Sign in =====
+   [INFO ]2025-02-1113:18:10.153[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:18:10.533[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:18:12.096[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user able to see warning message on clicking Get Started buttons of Tree on the home page without Sign in =====
+   [INFO ]2025-02-1113:18:12.536[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:18:12.995[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:18:14.501[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user able to see warning message on clicking Get Started buttons of Graph on the home page without Sign in =====
+   [INFO ]2025-02-1113:18:14.952[main]com.utilities.LoggerLoad1)-user is on home page after login
+   [WARN ]2025-02-1113:18:15.296[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [WARN ]2025-02-1113:18:15.329[main]com.utilities.LoggerLoad1)-user will notify that need to login to application
+   [INFO ]2025-02-1113:18:16.801[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to navigate registration page =====
+   [WARN ]2025-02-1113:18:17.216[main]com.utilities.LoggerLoad1)-user is on home page
+   [INFO ]2025-02-1113:18:17.434[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [INFO ]2025-02-1113:18:19.097[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Introduction page =====
+   [INFO ]2025-02-1113:18:20.613[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:18:20.701[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:18:21.159[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:18:23.222[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to tryEditor page from Introduction page =====
+   [INFO ]2025-02-1113:18:24.909[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:18:25.034[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:18:25.515[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:18:28.452[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate to tryeditor page from intoduction page and execute Python code =====
+   [INFO ]2025-02-1113:18:29.947[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:18:30.034[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:18:30.391[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:18:42.773[main]com.utilities.LoggerLoad1)-Scenario Failed: Navigate to tryeditor page from intoduction page and execute Python code
+   [INFO ]2025-02-1113:18:45.455[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate to tryeditor page from intoduction page and execute Python code =====
+   [INFO ]2025-02-1113:18:47.257[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:18:47.343[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:18:47.759[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:18:51.197[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate to tryeditor page from intoduction page and execute Python code =====
+   [INFO ]2025-02-1113:18:52.750[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:18:52.827[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:18:53.185[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:19:07.241[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Creating Linked list page from Introduction page =====
+   [INFO ]2025-02-1113:19:08.881[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:19:08.963[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:19:09.346[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:19:11.302[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Try Editor page for Creating Linked List page =====
+   [INFO ]2025-02-1113:19:12.746[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:19:12.847[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:19:13.264[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:19:14.815[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that user is able to navigate to Try Editor page for Creating Linked List page
+   [INFO ]2025-02-1113:19:16.570[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate to tryeditor from Creating Linked list  and execute Python code =====
+   [INFO ]2025-02-1113:19:18.174[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:19:18.265[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:19:18.714[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:19:31.085[main]com.utilities.LoggerLoad1)-Scenario Failed: Navigate to tryeditor from Creating Linked list  and execute Python code
+   [INFO ]2025-02-1113:19:33.604[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate to tryeditor from Creating Linked list  and execute Python code =====
+   [INFO ]2025-02-1113:19:35.062[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:19:35.150[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:19:35.511[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:19:38.835[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate to tryeditor from Creating Linked list  and execute Python code =====
+   [INFO ]2025-02-1113:19:40.275[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:19:40.363[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:19:40.725[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:19:54.743[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to navigate to Types of Linked List page =====
+   [INFO ]2025-02-1113:19:56.459[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:19:56.541[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:19:56.952[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:19:59.295[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user navigate to tryeditor from Types of Linked List page =====
+   [INFO ]2025-02-1113:20:00.785[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:20:00.890[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:20:01.286[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:20:04.236[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Types of Linked List page assessment =====
+   [INFO ]2025-02-1113:20:05.646[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:20:05.749[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:20:06.114[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:20:18.233[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it for Types of Linked List page assessment
+   [INFO ]2025-02-1113:20:20.078[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Types of Linked List page assessment =====
+   [INFO ]2025-02-1113:20:21.642[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:20:21.724[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:20:22.084[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:20:25.532[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Types of Linked List page assessment =====
+   [INFO ]2025-02-1113:20:26.946[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:20:27.051[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:20:27.397[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:20:42.064[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to navigate to Implement Linked List in Python =====
+   [INFO ]2025-02-1113:20:43.592[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:20:43.674[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:20:44.395[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:20:46.484[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user navigate to tryeditor from Implement Linked List in Python =====
+   [INFO ]2025-02-1113:20:47.964[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:20:48.052[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:20:48.476[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:20:51.362[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Implement Linked List in Python assessment =====
+   [INFO ]2025-02-1113:20:52.964[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:20:53.096[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:20:53.487[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:21:05.961[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it for Implement Linked List in Python assessment
+   [INFO ]2025-02-1113:21:08.240[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Implement Linked List in Python assessment =====
+   [INFO ]2025-02-1113:21:09.663[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:21:09.748[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:21:10.116[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:21:13.422[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Implement Linked List in Python assessment =====
+   [INFO ]2025-02-1113:21:14.823[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:21:14.917[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:21:15.283[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:21:29.104[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to navigate to Traversal page =====
+   [INFO ]2025-02-1113:21:30.674[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:21:30.773[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:21:31.131[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:21:32.997[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user navigate to tryeditor from Traversal page =====
+   [INFO ]2025-02-1113:21:34.414[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:21:34.510[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:21:34.868[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:21:37.715[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it forTraversal assessment =====
+   [INFO ]2025-02-1113:21:39.141[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:21:39.236[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:21:39.638[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:21:51.795[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it forTraversal assessment
+   [INFO ]2025-02-1113:21:55.111[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it forTraversal assessment =====
+   [INFO ]2025-02-1113:21:56.681[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:21:56.776[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:21:57.127[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:22:00.476[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it forTraversal assessment =====
+   [INFO ]2025-02-1113:22:02.023[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:22:02.122[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:22:02.611[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:22:17.283[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to navigate to Insertion page =====
+   [INFO ]2025-02-1113:22:18.862[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:22:18.964[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:22:19.326[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:22:21.244[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user navigate to tryeditor from Insertion page =====
+   [INFO ]2025-02-1113:22:22.807[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:22:22.880[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:22:23.219[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:22:26.178[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Insertion assessment =====
+   [INFO ]2025-02-1113:22:27.704[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:22:27.812[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:22:28.196[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:22:40.502[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it for Insertion assessment
+   [INFO ]2025-02-1113:22:42.591[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Insertion assessment =====
+   [INFO ]2025-02-1113:22:44.038[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:22:44.134[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:22:44.570[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:22:47.812[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Insertion assessment =====
+   [INFO ]2025-02-1113:22:49.326[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:22:49.422[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:22:49.765[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:23:04.125[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to navigate to Deletion page =====
+   [INFO ]2025-02-1113:23:05.855[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:23:06.010[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:23:06.581[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:23:08.584[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user navigate to tryeditor from Deletion page =====
+   [INFO ]2025-02-1113:23:10.208[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:23:10.316[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:23:10.691[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:23:13.746[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Deletion assessment =====
+   [INFO ]2025-02-1113:23:15.324[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:23:15.411[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:23:15.775[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:23:28.161[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it for Deletion assessment
+   [INFO ]2025-02-1113:23:30.402[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Deletion assessment =====
+   [INFO ]2025-02-1113:23:31.864[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:23:31.970[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:23:32.313[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:23:35.595[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for Deletion assessment =====
+   [INFO ]2025-02-1113:23:37.010[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:23:37.096[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:23:37.464[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:23:52.119[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Practice Questions page for Linked List =====
+   [INFO ]2025-02-1113:23:53.980[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:23:54.065[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:23:54.439[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [INFO ]2025-02-1113:23:56.898[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to see practice questions links =====
+   [INFO ]2025-02-1113:23:58.296[main]com.utilities.LoggerLoad1)-user is on homepage
+   [INFO ]2025-02-1113:23:58.432[main]com.utilities.LoggerLoad1)-user selecting datastructure dropdown
+   [INFO ]2025-02-1113:23:58.865[main]com.utilities.LoggerLoad1)-user selected from dropdown
+   [ERROR]2025-02-1113:23:59.938[main]com.utilities.LoggerLoad1)-Scenario Failed: verify user able to see practice questions links
+   [INFO ]2025-02-1113:24:01.714[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to registationpage =====
+   [INFO ]2025-02-1113:24:05.457[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user receives error message for empty Password field during Login =====
+   [INFO ]2025-02-1113:24:08.112[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user receives error message for empty Username field during Login =====
+   [INFO ]2025-02-1113:24:10.889[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user receives error message for invalid Username field during Login =====
+   [INFO ]2025-02-1113:24:14.276[main]com.utilities.LoggerLoad1)-===== Starting Scenario: User on loginpage and login with  valid inputs from Excel "Logindetails" and0 =====
+   [INFO ]2025-02-1113:24:17.230[main]com.utilities.LoggerLoad1)-===== Starting Scenario: User on loginpage and login with  valid inputs from Excel "Logindetails" and1 =====
+   [INFO ]2025-02-1113:24:21.131[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Implementation of Queue in Python page =====
+   [INFO ]2025-02-1113:24:25.565[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to try Editor page =====
+   [INFO ]2025-02-1113:24:30.737[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation of Queue in Python =====
+   [ERROR]2025-02-1113:24:44.803[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute for Implementation of Queue in Python
+   [INFO ]2025-02-1113:24:47.397[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation of Queue in Python =====
+   [INFO ]2025-02-1113:24:52.928[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation of Queue in Python =====
+   [INFO ]2025-02-1113:25:09.150[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Implementation using collections.deque pag =====
+   [INFO ]2025-02-1113:25:12.978[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Try Editor page for Implementation using collections.deque page =====
+   [INFO ]2025-02-1113:25:18.110[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation using collections.deque =====
+   [ERROR]2025-02-1113:25:32.463[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute for Implementation using collections.deque
+   [INFO ]2025-02-1113:25:35.339[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation using collections.deque =====
+   [INFO ]2025-02-1113:25:41.084[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation using collections.deque =====
+   [INFO ]2025-02-1113:25:58.043[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Implementation using Array page =====
+   [INFO ]2025-02-1113:26:01.925[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to tryeditor page for Implementation using Array =====
+   [INFO ]2025-02-1113:26:07.027[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation using Array =====
+   [ERROR]2025-02-1113:26:21.004[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute for Implementation using Array
+   [INFO ]2025-02-1113:26:23.603[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation using Array =====
+   [INFO ]2025-02-1113:26:29.239[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Implementation using Array =====
+   [INFO ]2025-02-1113:26:45.549[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Queue Operations page =====
+   [INFO ]2025-02-1113:26:49.479[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to try Editor page for Queue Operations =====
+   [INFO ]2025-02-1113:26:54.494[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Queue Operations =====
+   [ERROR]2025-02-1113:27:08.507[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute for Queue Operations
+   [INFO ]2025-02-1113:27:11.294[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Queue Operations =====
+   [INFO ]2025-02-1113:27:17.054[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute for Queue Operations =====
+   [INFO ]2025-02-1113:27:33.807[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Practice Questions page for Queue =====
+   [INFO ]2025-02-1113:27:37.870[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to see practice questions links for Queue =====
+   [ERROR]2025-02-1113:27:40.694[main]com.utilities.LoggerLoad1)-Scenario Failed: verify user able to see practice questions links for Queue
+   [INFO ]2025-02-1113:27:42.246[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify  user will able to see alert when required fields blank =====
+   [INFO ]2025-02-1113:27:42.948[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [INFO ]2025-02-1113:27:44.919[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user recieve error message when password mismatch =====
+   [INFO ]2025-02-1113:27:45.752[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [ERROR]2025-02-1113:28:16.658[main]com.utilities.LoggerLoad1)-Scenario Failed: verify user recieve error message when password mismatch
+   [INFO ]2025-02-1113:28:18.575[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user is able to navigate to login page =====
+   [INFO ]2025-02-1113:28:19.443[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [INFO ]2025-02-1113:28:21.704[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user receives error message for invalid password field during registration =====
+   [INFO ]2025-02-1113:28:22.365[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [ERROR]2025-02-1113:28:23.270[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that user receives error message for invalid password field during registration
+   [INFO ]2025-02-1113:28:25.350[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify password length validation =====
+   [INFO ]2025-02-1113:28:26.324[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [ERROR]2025-02-1113:28:27.178[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify password length validation
+   [INFO ]2025-02-1113:28:28.834[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that the user receives an error message for invalid username formats during registration =====
+   [INFO ]2025-02-1113:28:29.669[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [ERROR]2025-02-1113:29:00.347[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that the user receives an error message for invalid username formats during registration
+   [INFO ]2025-02-1113:29:02.732[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that the user receives an error message for invalid username formats during registration =====
+   [INFO ]2025-02-1113:29:03.593[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [ERROR]2025-02-1113:29:34.402[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that the user receives an error message for invalid username formats during registration
+   [INFO ]2025-02-1113:29:36.908[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that the user receives an error message for invalid username formats during registration =====
+   [INFO ]2025-02-1113:29:38.037[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [ERROR]2025-02-1113:30:08.887[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that the user receives an error message for invalid username formats during registration
+   [INFO ]2025-02-1113:30:10.462[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that the user receives an error message for invalid username formats during registration =====
+   [INFO ]2025-02-1113:30:11.258[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [ERROR]2025-02-1113:30:42.182[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify that the user receives an error message for invalid username formats during registration
+   [INFO ]2025-02-1113:30:44.054[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify Successful registration with valid details =====
+   [INFO ]2025-02-1113:30:44.931[main]com.utilities.LoggerLoad1)-user will navigate to register page
+   [INFO ]2025-02-1113:30:47.837[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Operations in Stack page =====
+   [INFO ]2025-02-1113:30:51.797[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to try Editor page =====
+   [INFO ]2025-02-1113:30:57.097[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for operations assessment =====
+   [ERROR]2025-02-1113:31:11.487[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it for operations assessment
+   [INFO ]2025-02-1113:31:13.974[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for operations assessment =====
+   [INFO ]2025-02-1113:31:19.987[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for operations assessment =====
+   [INFO ]2025-02-1113:31:36.036[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Implementation of stack page =====
+   [INFO ]2025-02-1113:31:39.899[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to assessment page of implementation =====
+   [INFO ]2025-02-1113:31:44.945[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for  implementation assessment =====
+   [ERROR]2025-02-1113:31:59.072[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it for  implementation assessment
+   [INFO ]2025-02-1113:32:00.724[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for  implementation assessment =====
+   [INFO ]2025-02-1113:32:06.138[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for  implementation assessment =====
+   [INFO ]2025-02-1113:32:23.220[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Applications page =====
+   [INFO ]2025-02-1113:32:27.162[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to assessment page of applications =====
+   [INFO ]2025-02-1113:32:32.449[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for applications assessment =====
+   [ERROR]2025-02-1113:32:46.860[main]com.utilities.LoggerLoad1)-Scenario Failed: verift user able to enter python code and execute it for applications assessment
+   [INFO ]2025-02-1113:32:49.453[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for applications assessment =====
+   [INFO ]2025-02-1113:32:55.218[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verift user able to enter python code and execute it for applications assessment =====
+   [INFO ]2025-02-1113:33:12.165[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user is able to navigate to Practice Questions page for stack =====
+   [INFO ]2025-02-1113:33:16.593[main]com.utilities.LoggerLoad1)-===== Starting Scenario: verify user able to see practice questions links for stack =====
+   [ERROR]2025-02-1113:33:19.228[main]com.utilities.LoggerLoad1)-Scenario Failed: verify user able to see practice questions links for stack
+   [INFO ]2025-02-1113:33:20.854[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Tree Page =====
+   [INFO ]2025-02-1113:33:24.402[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Overview of Trees Page =====
+   [INFO ]2025-02-1113:33:28.317[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to TryHere page from Overview of Trees Page =====
+   [INFO ]2025-02-1113:33:33.076[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Overview of Trees page =====
+   [INFO ]2025-02-1113:33:38.104[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Overview of Trees page =====
+   [INFO ]2025-02-1113:33:43.272[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Overview of Trees page =====
+   [ERROR]2025-02-1113:33:46.787[main]com.utilities.LoggerLoad1)-Scenario Failed: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Overview of Trees page
+   [INFO ]2025-02-1113:33:48.618[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Terminologies of Trees Page =====
+   [INFO ]2025-02-1113:33:52.603[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Try here from Terminologies of Trees Page =====
+   [INFO ]2025-02-1113:33:57.341[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Terminologies of Trees page =====
+   [INFO ]2025-02-1113:34:02.743[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Terminologies of Trees page =====
+   [INFO ]2025-02-1113:34:08.165[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Types of Trees of Trees Page =====
+   [INFO ]2025-02-1113:34:13.082[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Types of Trees Page =====
+   [INFO ]2025-02-1113:34:17.982[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Types of Trees page =====
+   [INFO ]2025-02-1113:34:23.135[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Types of Trees page =====
+   [INFO ]2025-02-1113:34:28.362[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Tree Traversals Page =====
+   [INFO ]2025-02-1113:34:32.471[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Tree Traversals page =====
+   [INFO ]2025-02-1113:34:37.218[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Tree Traversals page =====
+   [INFO ]2025-02-1113:34:42.476[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Types of Trees page =====
+   [INFO ]2025-02-1113:34:47.277[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Traversals-Illustration Page =====
+   [INFO ]2025-02-1113:34:51.282[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Traversals-Illustration page =====
+   [INFO ]2025-02-1113:34:56.070[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Traversals-Illustration page =====
+   [INFO ]2025-02-1113:35:01.153[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Traversals-Illustration page =====
+   [INFO ]2025-02-1113:35:06.448[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Binary Trees Page =====
+   [INFO ]2025-02-1113:35:10.705[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Binary Trees page =====
+   [INFO ]2025-02-1113:35:15.705[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Binary Trees page =====
+   [INFO ]2025-02-1113:35:20.733[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Binary Trees page =====
+   [INFO ]2025-02-1113:35:25.821[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Types of Binary Trees Page =====
+   [INFO ]2025-02-1113:35:29.854[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Types of Binary Trees page =====
+   [INFO ]2025-02-1113:35:34.945[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Types of Binary Trees page =====
+   [INFO ]2025-02-1113:35:40.430[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Types of Binary Trees page =====
+   [INFO ]2025-02-1113:35:45.800[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Implementation in Python Page =====
+   [INFO ]2025-02-1113:35:49.747[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Implementation in Python page =====
+   [INFO ]2025-02-1113:35:54.876[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Implementation in Python page =====
+   [INFO ]2025-02-1113:36:00.428[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Implementation in Python  page =====
+   [INFO ]2025-02-1113:36:05.455[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Binary Tree Traversals Page =====
+   [INFO ]2025-02-1113:36:09.608[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Binary Tree Traversals page =====
+   [INFO ]2025-02-1113:36:14.159[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating to tryEditor page from Binary Tree Traversals page =====
+   [INFO ]2025-02-1113:36:18.990[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box after navigating to tryEditor page from Binary Tree Traversals  page =====
+   [INFO ]2025-02-1113:36:23.807[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Implementation of Binary Trees Page =====
+   [INFO ]2025-02-1113:36:27.715[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Implementation of Binary Trees page =====
+   [INFO ]2025-02-1113:36:32.258[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box after navigating  from Implementation of Binary Trees page =====
+   [INFO ]2025-02-1113:36:37.567[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box  from Implementation of Binary Trees page =====
+   [INFO ]2025-02-1113:36:42.751[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Applications of Binary trees Page =====
+   [INFO ]2025-02-1113:36:46.550[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Applications of Binary trees page =====
+   [INFO ]2025-02-1113:36:51.551[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box from Applications of Binary trees page =====
+   [INFO ]2025-02-1113:36:56.875[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box from Applications of Binary trees page =====
+   [INFO ]2025-02-1113:37:02.151[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Binary Search Trees Page =====
+   [INFO ]2025-02-1113:37:06.869[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Binary Search Trees page =====
+   [INFO ]2025-02-1113:37:12.166[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box page from Binary Search Trees page =====
+   [INFO ]2025-02-1113:37:17.487[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box  from Binary Search Trees  page =====
+   [INFO ]2025-02-1113:37:22.764[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify is user is able to navigate to Implementation Of BST Page =====
+   [INFO ]2025-02-1113:37:26.734[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if user is able to navigate to Try here from Implementation Of BST page =====
+   [INFO ]2025-02-1113:37:31.284[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User gets output upon giving valid python code in Editor box from Implementation Of BST page =====
+   [INFO ]2025-02-1113:37:36.375[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify if User sees error message upon giving invalid python code in Editor box  from Implementation Of BST  page =====
+   [INFO ]2025-02-2516:24:13.773[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to Arrays in Python  page =====
+   [INFO ]2025-02-2516:24:23.854[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Verify that user navigate to TryEditor page for Arrays in Python page =====
+   [INFO ]2025-02-2516:24:41.780[main]com.utilities.LoggerLoad1)-===== Starting Scenario: Navigate through Arrays in Python and execute Python code =====
+   

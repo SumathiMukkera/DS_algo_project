@@ -74,7 +74,8 @@ public class Hooks {
 		    }
     }
 
-	
+}
+/*	
 	
 	@After(order=1)
 	public void tearDown(Scenario scenario){
@@ -94,7 +95,7 @@ public class Hooks {
 
 	}
 
-
+*/
 
 
 

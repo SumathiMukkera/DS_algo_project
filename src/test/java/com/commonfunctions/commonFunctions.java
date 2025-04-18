@@ -57,11 +57,10 @@ public void enterExcelDataForTryEditor(String sheetname, Integer rownumber) thro
 
 		ExcelfileReader reader = new ExcelfileReader();
 
-		List<Map<String, String>> testdata = reader.getData("src\\test\\resources\\ExceltestData\\TestData.xlsx", sheetname);
+		List<Map<String, String>> testdata = reader.getData("src\\test\\resources\\ExcelTestData\\TestData.xlsx", sheetname);
 		String pythoncode  = testdata.get(rownumber).get("PythonCode");
 		String expectedoutput = testdata.get(rownumber).get("Output");
 		String expectedmessage = testdata.get(rownumber).get("ExpectedMessage");
-		this.expectedOutput = expectedoutput;
 		this.expectedmessage=expectedmessage;
 		commonpage.ValidInvalidtextEditorOperations(pythoncode);
 		
